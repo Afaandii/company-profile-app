@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Laravel + Svelte</title>
+    <title>Alamon Go | Company Profile</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @inertiaHead
 </head>
