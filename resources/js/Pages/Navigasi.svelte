@@ -41,7 +41,7 @@
         </div>
         <div class="my-auto">
             <button
-                class="btn btn-outline btn-primary w-32 rounded-full text-gray-950"
+                class="btn btn-outline btn-primary w-32 rounded-full text-gray-950 hover:text-white"
                 >Login</button
             >
         </div>

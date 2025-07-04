@@ -14,13 +14,16 @@
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
             <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 class="mb-5 text-5xl font-bold">ALAMON GO!</h1>
                 <p class="mb-5">
                     Provident cupiditate voluptatem et in. Quaerat fugiat ut
                     assumenda excepturi exercitationem quasi. In deleniti eaque
                     aut repudiandae et a id nisi.
                 </p>
-                <button class="btn btn-primary">Get Started</button>
+                <button
+                    class="btn btn-outline btn-primary w-32 rounded-full text-white"
+                    >Lebih Lanjut</button
+                >
             </div>
         </div>
     </div>
