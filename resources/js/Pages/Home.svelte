@@ -16,13 +16,13 @@
             <div class="max-w-md">
                 <h1 class="mb-5 text-5xl font-bold">ALAMON GO!</h1>
                 <p class="mb-5">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                    assumenda excepturi exercitationem quasi. In deleniti eaque
-                    aut repudiandae et a id nisi.
+                    Minuman sehat kaya rasa dan manfaat, membantu meningkatkan
+                    berat badan anda. Cukup seduh, nikmati langsung kesegaran
+                    dari ALAMON GO!.
                 </p>
                 <button
-                    class="btn btn-outline btn-primary w-32 rounded-full text-white"
-                    >Lebih Lanjut</button
+                    class="btn btn-outline btn-primary w-48 h-[50px] rounded-full text-white"
+                    >Coba Sekarang!</button
                 >
             </div>
         </div>
