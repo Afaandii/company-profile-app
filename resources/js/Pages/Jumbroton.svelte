@@ -14,9 +14,15 @@
     <div class="container">
         <div class="col">
             <div class="col-md-12">
-                <div class="company-des">
-                    <h6>Our Clients</h6>
-                    <h2>We&apos;re fortunate to have incredible clients.</h2>
+                <div class="company-des w-[750px] pt-5">
+                    <h5
+                        class="font-poppins text-[15px] text-[#d2691e] font-bold"
+                    >
+                        Dipercaya oleh
+                    </h5>
+                    <h3 class="font-montserrat text-white text-[2rem] mt-2">
+                        Ratusan pengguna & toko telah memilih Alamon Go!
+                    </h3>
                 </div>
             </div>
             <div class=" col-md-12">
@@ -53,22 +59,6 @@
 </section>
 
 <style>
-    .company-des {
-        font-family: Arial, Helvetica, sans-serif;
-        width: 700px;
-        /* margin-top: 8rem; */
-    }
-
-    .company-des h6 {
-        color: salmon;
-    }
-
-    .company-des h2 {
-        font-weight: 700;
-        font-size: 2.5rem;
-        color: white;
-    }
-
     /* ANIMASI SLIDE */
     @keyframes slide {
         0% {
