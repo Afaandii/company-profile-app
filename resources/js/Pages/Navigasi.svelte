@@ -38,7 +38,7 @@
         <div class="my-auto">
             <a
                 href="http://localhost:8000"
-                class="flex items-center gap-2 text-gray-950 no-underline text-[1rem] font-poppins"
+                class="flex items-center gap-2 text-gray-950 no-underline text-[1rem] font-poppins hover:text-orange-500"
             >
                 <i class="fa-regular fa-circle-user text-[20px]"></i>
                 <span>Login</span>
