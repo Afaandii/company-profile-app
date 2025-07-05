@@ -1,5 +1,5 @@
 <nav class="fixed top-0 left-0 bg-white w-full h-auto z-50 shadow-md">
-    <div class="flex justify-around align-items-center">
+    <div class="flex justify-evenly align-items-center">
         <div class="w-16 my-auto">
             <img src="storage/image/logos-nobg.png" alt="user.jpg" />
         </div>
@@ -36,10 +36,13 @@
             </ul>
         </div>
         <div class="my-auto">
-            <button
-                class="btn btn-outline btn-primary w-32 h-[45px] rounded-full text-gray-950 hover:text-white"
-                >Login</button
+            <a
+                href="http://localhost:8000"
+                class="flex items-center gap-2 text-gray-950 no-underline text-[1rem] font-poppins"
             >
+                <i class="fa-regular fa-circle-user text-[20px]"></i>
+                <span>Login</span>
+            </a>
         </div>
     </div>
 </nav>
