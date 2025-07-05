@@ -18,6 +18,7 @@
     },
     "dependencies": {
         "@inertiajs/svelte": "^2.0.14",
+        "bootstrap": "^5.3.7",
         "daisyui": "^5.0.43"
     }
 }
