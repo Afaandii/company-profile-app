@@ -2,6 +2,7 @@
     import Navigasi from "./Navigasi.svelte";
     import Hero from "./Hero.svelte";
     import Jumbroton from "./Jumbroton.svelte";
+    import News from "./News.svelte";
 </script>
 
 <!-- Navigasi -->
@@ -12,3 +13,6 @@
 
 <!-- jumbotron -->
 <Jumbroton />
+
+<!-- News -->
+<News />
