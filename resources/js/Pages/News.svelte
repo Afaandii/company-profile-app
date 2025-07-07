@@ -5,18 +5,20 @@
         class="mx-auto bg-white p-3 w-[95%] rounded-xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
     >
-        <div class="ml-2">
-            <h1 class="font-poppins font-semibold">Berita Dan Artikel</h1>
+        <div class="ml-2 mb-4">
+            <h1 class="font-poppins font-semibold text-lg md:text-3xl">
+                Berita Dan Artikel
+            </h1>
         </div>
         <div
-            class="flex flex-col md:flex-row w-full md:justify-between h-auto md:overflow-hidden items-center"
+            class="flex flex-col lg:flex-row w-full lg:justify-between lg:items-center"
         >
             <!-- first news -->
             <div
-                class="bg-white w-full md:w-[580px] md:h-[380px] rounded-2xl flex items-center justify-center mb-4 md:mb-0"
+                class="bg-white w-full lg:w-[580px] h-[380px] rounded-2xl flex items-center justify-center mb-4"
                 style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
             >
-                <div class="card w-[550px]">
+                <div class="card w-full lg:w-[550px]">
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                         class="card-img-top h-[250px]"
@@ -35,91 +37,85 @@
 
             <!-- side news -->
             <div
-                class="bg-white w-full md:w-[480px] h-[440px] flex items-center justify-center rounded-xl"
+                class="bg-white w-full lg:w-[480px] lg:h-[440px] flex flex-col gap-3 lg:items-center lg:justify-center rounded-xl"
                 style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
             >
-                <div class="flex flex-md-column">
-                    <div class="card mb-3 w-[450px]">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img
-                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-start h-[600px]"
-                                    alt="foto.png"
-                                />
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body p-0 ml-2">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        This is a wider card with supporting
-                                        text below as a natural lead-in to
-                                        additional
-                                    </p>
-                                </div>
+                <div class="card w-full lg:w-[450px]">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                class="img-fluid rounded-start h-[600px]"
+                                alt="foto.png"
+                            />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-0 ml-2">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-3 w-[450px]">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img
-                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-start"
-                                    alt="foto.png"
-                                />
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body p-0 ml-2">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        This is a wider card with supporting
-                                        text below as a natural lead-in to
-                                        additional
-                                    </p>
-                                </div>
+                </div>
+                <div class="card w-full lg:w-[450px]">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                class="img-fluid rounded-start"
+                                alt="foto.png"
+                            />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-0 ml-2">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-3 w-[450px]">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img
-                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-start"
-                                    alt="foto.png"
-                                />
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body p-0 ml-2">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        This is a wider card with supporting
-                                        text below as a natural lead-in to
-                                        additional
-                                    </p>
-                                </div>
+                </div>
+                <div class="card w-full lg:w-[450px]">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                class="img-fluid rounded-start"
+                                alt="foto.png"
+                            />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-0 ml-2">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="card w-[450px]">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img
-                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-start"
-                                    alt="foto.png"
-                                />
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body p-0 ml-2">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        This is a wider card with supporting
-                                        text below as a natural lead-in to
-                                        additional
-                                    </p>
-                                </div>
+                </div>
+                <div class="card w-full lg:w-[450px]">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                class="img-fluid rounded-start"
+                                alt="foto.png"
+                            />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-0 ml-2">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text
+                                    below as a natural lead-in to additional
+                                </p>
                             </div>
                         </div>
                     </div>
