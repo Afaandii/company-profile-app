@@ -1,4 +1,6 @@
-<section class="w-full min-h-[100vh] flex justify-center items-center">
+<section
+    class="w-full min-h-[50vh] md:w-full md:min-h-[100vh] flex justify-center items-center"
+>
     <div
         class="mx-auto bg-white p-3 w-[95%] rounded-xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
@@ -7,11 +9,11 @@
             <h1 class="font-poppins font-semibold">Berita Dan Artikel</h1>
         </div>
         <div
-            class="flex w-full justify-between h-auto overflow-hidden items-center"
+            class="flex flex-col md:flex-row w-full md:justify-between h-auto md:overflow-hidden items-center"
         >
             <!-- first news -->
             <div
-                class="bg-white w-[580px] h-[380px] rounded-2xl flex items-center justify-center"
+                class="bg-white w-full md:w-[580px] md:h-[380px] rounded-2xl flex items-center justify-center mb-4 md:mb-0"
                 style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
             >
                 <div class="card w-[550px]">
@@ -33,7 +35,7 @@
 
             <!-- side news -->
             <div
-                class="bg-white w-[480px] h-[440px] flex items-center justify-center rounded-xl"
+                class="bg-white w-full md:w-[480px] h-[440px] flex items-center justify-center rounded-xl"
                 style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
             >
                 <div class="flex flex-md-column">
