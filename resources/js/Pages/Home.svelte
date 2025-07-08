@@ -11,8 +11,8 @@
 <!-- Hero section -->
 <Hero />
 
-<!-- jumbotron -->
-<Jumbroton />
-
 <!-- News -->
 <News />
+
+<!-- jumbotron -->
+<Jumbroton />
