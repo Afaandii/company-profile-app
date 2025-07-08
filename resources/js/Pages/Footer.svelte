@@ -12,6 +12,8 @@
                 Providing reliable tech since 2025
             </p>
         </aside>
+
+        <!-- sosial media -->
         <nav>
             <h6 class="footer-title">Social</h6>
             <div class="grid grid-flow-col gap-4">
@@ -30,13 +32,35 @@
                 </a>
             </div>
         </nav>
+
+        <!-- ini service -->
+        <nav>
+            <h6 class="footer-title">Services</h6>
+            <a href="" class="link link-hover text-white">Branding</a>
+            <a href="" class="link link-hover text-white">Design</a>
+            <a href="" class="link link-hover text-white">Marketing</a>
+            <a href="" class="link link-hover text-white">Advertisement</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a href="" class="link link-hover text-white">About us</a>
+            <a href="" class="link link-hover text-white">Contact</a>
+            <a href="" class="link link-hover text-white">Jobs</a>
+            <a href="" class="link link-hover text-white">Press kit</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="" class="link link-hover text-white">Terms of use</a>
+            <a href="" class="link link-hover text-white">Privacy policy</a>
+            <a href="" class="link link-hover text-white">Cookie policy</a>
+        </nav>
     </div>
 
+    <hr class="h-[2px] bg-white my-4 w-full" />
     <!-- Copyright bagian bawah -->
-    <div class="m-0 w-[100%]">
-        <p class="font-poppins text-white">
-            Copyright © {new Date().getFullYear()} - All right reserved by ACME
-            Industries Ltd
+    <div class="w-full">
+        <p class="font-poppins text-white text-[13px]">
+            © {new Date().getFullYear()} PT ALAMON GO Industri Ltd
         </p>
     </div>
 </footer>
