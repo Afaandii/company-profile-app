@@ -1,4 +1,4 @@
-<section class=" pt-[64px]">
+<section class="lg:pt-[64px]">
     <div class="hero w-full h-[100vh]" style="hero">
         <div class="hero-content text-neutral-content text-center"></div>
     </div>
