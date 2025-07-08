@@ -1,7 +1,9 @@
 <nav class="fixed top-0 left-0 bg-white w-full h-auto z-50 shadow-md">
     <div class="flex justify-evenly align-items-center">
         <div class="w-20 my-auto">
-            <img src="storage/image/logos-nobg.png" alt="user.jpg" />
+            <a href="#">
+                <img src="storage/image/logos-nobg.png" alt="user.jpg" />
+            </a>
         </div>
         <div class="my-auto">
             <ul
