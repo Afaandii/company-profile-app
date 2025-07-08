@@ -3,6 +3,7 @@
     import Hero from "./Hero.svelte";
     import Jumbroton from "./Jumbroton.svelte";
     import News from "./News.svelte";
+    import Footer from "./Footer.svelte";
 </script>
 
 <!-- Navigasi -->
@@ -16,3 +17,6 @@
 
 <!-- jumbotron -->
 <Jumbroton />
+
+<!-- Footer -->
+<Footer />
