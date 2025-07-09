@@ -1,4 +1,4 @@
-<footer class="bg-neutral text-neutral-content p-10">
+<footer class="bg-[#1f2122] text-neutral-content p-10">
     <div class="footer sm:footer-horizontal">
         <aside>
             <img

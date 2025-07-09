@@ -1,7 +1,7 @@
 <nav class="fixed top-0 left-0 bg-white w-full h-auto z-50 shadow-md">
     <div class="flex justify-evenly align-items-center">
         <div class="w-20 my-auto">
-            <a href="/#">
+            <a href="/">
                 <img src="storage/image/logos-nobg.png" alt="user.jpg" />
             </a>
         </div>
@@ -11,7 +11,7 @@
             >
                 <li>
                     <a
-                        href="/#"
+                        href="/"
                         class="text-[17px] no-underline font-bold text-gray-950 hover:text-orange-500 font-poppins"
                         >Beranda</a
                     >
@@ -25,14 +25,14 @@
                 </li>
                 <li>
                     <a
-                        href="#"
+                        href="/news"
                         class="text-[17px] font-bold no-underline text-gray-950 hover:text-orange-500 font-poppins"
                         >News</a
                     >
                 </li>
                 <li>
                     <a
-                        href="#"
+                        href="/product"
                         class="text-[17px] font-bold no-underline text-gray-950 hover:text-orange-500 font-poppins"
                         >Product</a
                     >
