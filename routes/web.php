@@ -15,6 +15,10 @@ Route::get('/about-us', function () {
     return Inertia::render('About-us');
 });
 
+Route::get('/news', function () {
+    return Inertia::render('News');
+});
+
 Route::get('/test', function () {
     return Inertia::render('Test');
 });
