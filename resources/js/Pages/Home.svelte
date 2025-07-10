@@ -2,8 +2,8 @@
     import Navigasi from "./Navigasi.svelte";
     import Hero from "./Hero.svelte";
     import Jumbroton from "./Jumbroton.svelte";
-    import News from "./News.svelte";
     import Footer from "./Footer.svelte";
+    import Berita from "./Berita.svelte";
 </script>
 
 <!-- Navigasi -->
@@ -13,7 +13,7 @@
 <Hero />
 
 <!-- News -->
-<News />
+<Berita />
 
 <!-- jumbotron -->
 <Jumbroton />
