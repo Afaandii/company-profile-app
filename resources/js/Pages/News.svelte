@@ -7,8 +7,12 @@
 <Navigasi />
 
 <section class="w-full mt-24">
-    <div class="flex justify-center items-center mb-3">
-        <h1 class="font-poppins font-semibold">News & Article</h1>
+    <div class="container mb-3">
+        <img
+            src="storage/image/banner-news.png"
+            alt="banner"
+            class="rounded-2xl lg:h-[75vh] w-full"
+        />
     </div>
 
     <div
