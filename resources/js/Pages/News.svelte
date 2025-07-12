@@ -6,8 +6,8 @@
 <!-- Navbar -->
 <Navigasi />
 
-<section class="w-full mt-24">
-    <div class="container mb-3">
+<section class="w-full mt-20">
+    <div class="container mb-5">
         <img
             src="storage/image/banner-news.png"
             alt="banner"
@@ -16,7 +16,7 @@
     </div>
 
     <div
-        class="container bg-white p-4 mb-10"
+        class="container bg-white p-4 mb-10 rounded-2xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
     >
         <h3>Latest News</h3>
@@ -82,7 +82,7 @@
 
     <!-- updated news -->
     <div
-        class="container bg-white p-4 mb-16"
+        class="container bg-white p-4 mb-14 rounded-2xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
     >
         <h3>Updated News</h3>
