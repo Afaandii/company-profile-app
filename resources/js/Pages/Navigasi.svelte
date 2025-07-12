@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <a
-                        href="/product"
+                        href="/produk"
                         class="text-[17px] font-bold no-underline text-gray-950 hover:text-orange-500 font-poppins"
                         >Product</a
                     >
