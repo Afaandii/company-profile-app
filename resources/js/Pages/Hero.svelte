@@ -1,6 +1,6 @@
-<section class="lg:pt-[64px]">
+<section>
     <div class="hero w-full h-[100vh]" style="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay bg-black opacity-55"></div>
         <div class="hero-content text-neutral-content text-center"></div>
     </div>
 </section>
