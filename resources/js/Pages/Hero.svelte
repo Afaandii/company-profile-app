@@ -8,8 +8,11 @@
         class="carousel slide"
         data-bs-ride="carousel"
     >
+        <div
+            class="hero-overlay absolute top-0 left-0 w-full h-full bg-black opacity-55 z-10 pointer-events-none"
+        ></div>
         <div class="carousel-inner">
-            <div class="carousel-item hero active">
+            <div class="carousel-item active">
                 <img
                     src="storage/image/hero-bg.png"
                     class="d-block w-[100vw] h-[100vh] bg-cover bg-no-repeat bg-center"
