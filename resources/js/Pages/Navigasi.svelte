@@ -47,7 +47,7 @@
                     <a
                         href="/news"
                         class="relative inline-block text-[17px] no-underline text-white font-poppins group"
-                        >News
+                        >Berita
                         <span
                             class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
                         ></span>
@@ -58,7 +58,7 @@
                         href="/produk"
                         class="relative inline-block text-white font-poppins text-[17px] no-underline group"
                     >
-                        Product
+                        Produk Kami
                         <span
                             class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
                         ></span>

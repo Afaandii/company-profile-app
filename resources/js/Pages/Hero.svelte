@@ -3,12 +3,14 @@
         <div class="hero">
             <div class="hero-overlay bg-black opacity-70"></div>
             <div class="hero-content text-neutral-content text-center mt-24">
-                <div class="lg:w-[55%]">
-                    <h1 class="text-[45px] font-bold font-montserrat">
+                <div class="lg:w-[55%] w-[75%]">
+                    <h1
+                        class="lg:text-[45px] text-[50px] font-bold font-montserrat"
+                    >
                         Welcome To Alamon GO!
                     </h1>
                     <p
-                        class="text-[18px] mt-2 mb-4 font-montserrat font-semibold"
+                        class="lg:text-[18px] text-[20px] mt-2 mb-4 font-montserrat font-semibold"
                         style="line-height: 1.8rem;"
                     >
                         Susu tinggi nutrisi dan kalori yang bantu kamu menambah
