@@ -1,9 +1,31 @@
 <section>
-    <!-- <div class="hero w-full h-[100vh]" style="hero">
-        <div class="hero-content text-neutral-content text-center"></div>
-        <div class="hero-overlay bg-black opacity-55"></div>
-    </div> -->
-    <div
+    <div class="hero w-full h-[100vh]" style="hero">
+        <div class="hero">
+            <div class="hero-overlay bg-black opacity-70"></div>
+            <div class="hero-content text-neutral-content text-center mt-24">
+                <div class="lg:w-[55%]">
+                    <h1 class="text-[45px] font-bold font-montserrat">
+                        Welcome To Alamon GO!
+                    </h1>
+                    <p
+                        class="text-[18px] mt-2 mb-4 font-montserrat font-semibold"
+                        style="line-height: 1.8rem;"
+                    >
+                        Susu tinggi nutrisi dan kalori yang bantu kamu menambah
+                        berat badan ideal tanpa ribet. Cocok untuk remaja,
+                        dewasa, hingga atlet!
+                    </p>
+                    <a
+                        href="/"
+                        class="px-10 no-underline py-[12px] border border-blue-800 text-white font-semibold rounded-full hover:bg-blue-800 hover:text-white transition duration-500"
+                    >
+                        Coba Sekarang!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div
         id="carouselExampleAutoplaying"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -52,16 +74,16 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </div> -->
 </section>
 
 <style>
-    /* .hero {
+    .hero {
         background-image: url("storage/image/hero-bg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         height: 100vh;
         width: 100%;
-    } */
+    }
 </style>
