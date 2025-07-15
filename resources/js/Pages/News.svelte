@@ -6,7 +6,13 @@
 <!-- Navbar -->
 <Navigasi />
 
-<section class="w-full mt-20">
+<div class="bg-[#1f2122] lg:h-[50vh] h-[30vh] flex items-center justify-center">
+    <h1 class="text-5xl text-white text-center font-poppins mt-20 font-bold">
+        Berita & Artikel
+    </h1>
+</div>
+
+<section class="w-full mt-16">
     <div class="container mb-5">
         <img
             src="storage/image/banner-news.png"
