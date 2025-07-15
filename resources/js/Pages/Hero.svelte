@@ -2,15 +2,15 @@
     <div class="hero w-full h-[100vh]" style="hero">
         <div class="hero">
             <div class="hero-overlay bg-black opacity-70"></div>
-            <div class="hero-content text-neutral-content text-center mt-24">
-                <div class="lg:w-[55%] w-[75%]">
-                    <h1
-                        class="lg:text-[45px] text-[50px] font-bold font-montserrat"
-                    >
-                        Welcome To Alamon GO!
+            <div class="hero-content text-neutral-content text-center mt-20">
+                <div class="lg:w-[51%] w-[75%]">
+                    <h1 class="lg:text-[45px] text-[50px] font-montserrat">
+                        Selamat Datang Di <span class=" font-extrabold"
+                            >Alamon GO</span
+                        >
                     </h1>
                     <p
-                        class="lg:text-[18px] text-[20px] mt-2 mb-4 font-montserrat font-semibold"
+                        class="lg:text-[18px] text-[20px] mt-2 mb-[2.5rem] font-poppins"
                         style="line-height: 1.8rem;"
                     >
                         Susu tinggi nutrisi dan kalori yang bantu kamu menambah
@@ -21,7 +21,7 @@
                         href="/"
                         class="px-10 no-underline py-[12px] border border-blue-800 text-white font-semibold rounded-full hover:bg-blue-800 hover:text-white transition duration-500"
                     >
-                        Coba Sekarang!
+                        Coba Sekarang
                     </a>
                 </div>
             </div>
