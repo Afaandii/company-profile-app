@@ -5,7 +5,21 @@
 
 <Navigasi />
 
-<section class="mt-32 mb-24 w-full lg:h-[100vh]">
+<!-- <div class="relative">
+    <div class="hero relative z-10"></div>
+    <div class="absolute inset-0 bg-black/60 z-20"></div>
+    <div
+        class="absolute inset-0 z-30 flex items-center justify-center text-white"
+    >
+        <h1 class="text-4xl font-bold">Teks di atas hero</h1>
+    </div>
+</div> -->
+<div class="bg-[#1f2122] lg:h-[50vh] h-[30vh] flex items-center justify-center">
+    <h1 class="text-5xl text-white text-center font-poppins mt-20 font-bold">
+        Tentang Kami
+    </h1>
+</div>
+<section class="mt-14 mb-24 w-full lg:h-[100vh]">
     <div
         class="container bg-white rounded-3xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
