@@ -6,20 +6,24 @@
 <!-- Navbar -->
 <Navigasi />
 
-<div class="bg-[#1f2122] lg:h-[50vh] h-[30vh] flex items-center justify-center">
-    <h1 class="text-5xl text-white text-center font-poppins mt-20 font-bold">
-        Berita & Artikel
-    </h1>
+<div class="relative">
+    <div class="news relative z-10"></div>
+    <div class="absolute inset-0 bg-black opacity-75 z-20"></div>
+    <div
+        class="absolute inset-0 z-30 mt-20 flex items-center justify-center text-white"
+    >
+        <h1 class="text-5xl font-bold font-poppins">Berita & Artikel</h1>
+    </div>
 </div>
 
 <section class="w-full mt-16">
-    <div class="container mb-5">
+    <!-- <div class="container mb-5">
         <img
             src="storage/image/banner-news.png"
             alt="banner"
             class="rounded-2xl lg:h-[75vh] w-full"
         />
-    </div>
+    </div> -->
 
     <div
         class="container bg-white p-4 mb-10 rounded-2xl"
@@ -155,3 +159,14 @@
 
 <!-- footer -->
 <Footer />
+
+<style>
+    .news {
+        background-image: url("storage/image/biji-coklat.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 60vh;
+    }
+</style>
