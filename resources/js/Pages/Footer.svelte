@@ -1,5 +1,11 @@
-<footer class="bg-[#1f2122] text-neutral-content p-10">
-    <div class="footer sm:footer-horizontal">
+<footer class="relative text-neutral-content p-10">
+    <!-- background image -->
+    <div class="absolute inset-0 footer-bg z-10"></div>
+
+    <!-- overlay hitam -->
+    <div class="absolute inset-0 bg-black opacity-70 z-20"></div>
+
+    <div class="footer sm:footer-horizontal relative z-30">
         <aside>
             <img
                 src="storage/image/logo-footer.png"
@@ -68,3 +74,13 @@
         </p>
     </div>
 </footer>
+
+<style>
+    .footer-bg {
+        background-image: url("storage/image/biji-coklat.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+</style>
