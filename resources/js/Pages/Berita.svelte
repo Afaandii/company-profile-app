@@ -9,14 +9,14 @@
             <div
                 class="bg-white w-full lg:w-[720px] h-[540px] rounded-2xl flex flex-col items-center justify-center shadow-sm overflow-auto"
             >
-                <div class="self-start ml-8 mt-2 mb-3">
+                <div class="self-start ml-20 lg:ml-8 mt-2 mb-3">
                     <h1
                         class="font-poppins text-left font-bold text-lg md:text-4xl"
                     >
                         Berita Terbaru
                     </h1>
                 </div>
-                <div class="w-[850px] lg:w-[660px]">
+                <div class="w-[750px] lg:w-[660px]">
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                         class="w-full h-[350px] rounded-2xl"
@@ -43,13 +43,13 @@
 
             <!-- side news -->
             <div
-                class="bg-white w-full h-[760px] lg:w-[420px] lg:h-[540px] flex flex-col items-center justify-center rounded-xl shadow-sm gap-2"
+                class="bg-white w-full h-[820px] lg:w-[420px] lg:h-[540px] flex flex-col items-center justify-center rounded-xl shadow-sm lg:gap-2 sm:gap-5"
             >
                 <div
-                    class="self-start ml-5 flex gap-20 items-center justify-center"
+                    class="self-start ml-28 lg:ml-5 flex gap-80 lg:gap-20 items-center justify-center"
                 >
                     <h1
-                        class="font-poppins text-left font-bold text-lg md:text-3xl"
+                        class="font-poppins text-left font-bold text-[40px] lg:text-[30px]"
                     >
                         Berita Lainnya
                     </h1>
@@ -68,9 +68,8 @@
                             <div class="col-md-4">
                                 <img
                                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-lg"
+                                    class="rounded-lg h-[120px] lg:h-[75px]"
                                     alt="foto.png"
-                                    style="height: 75px;"
                                 />
                             </div>
                             <div class="col-md-8">
@@ -98,9 +97,8 @@
                             <div class="col-md-4">
                                 <img
                                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-lg"
+                                    class="rounded-lg h-[120px] lg:h-[75px]"
                                     alt="foto.png"
-                                    style="height: 75px;"
                                 />
                             </div>
                             <div class="col-md-8">
@@ -128,9 +126,8 @@
                             <div class="col-md-4">
                                 <img
                                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-lg"
+                                    class=" rounded-lg h-[120px] lg:h-[75px]"
                                     alt="foto.png"
-                                    style="height: 75px;"
                                 />
                             </div>
                             <div class="col-md-8">
@@ -158,9 +155,8 @@
                             <div class="col-md-4">
                                 <img
                                     src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    class="img-fluid rounded-lg"
+                                    class="rounded-lg h-[120px] lg:h-[75px]"
                                     alt="foto.png"
-                                    style="height: 75px;"
                                 />
                             </div>
                             <div class="col-md-8">
