@@ -1,4 +1,4 @@
-<footer class="bg-[#1f2122] text-neutral-content p-10" data-aos="fade-up">
+<footer class="bg-[#1f2122] text-neutral-content p-10" data-aos="fade">
     <!-- <div class="absolute inset-0 footer-bg z-10"></div> -->
     <!-- <div class="absolute inset-0 bg-black opacity-70 z-20"></div> -->
     <div class="footer sm:footer-horizontal">

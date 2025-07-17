@@ -4,7 +4,10 @@
             <div class="hero-overlay bg-black opacity-70"></div>
             <div class="hero-content text-neutral-content text-center mt-20">
                 <div class="lg:w-[51%] w-[75%]">
-                    <h1 class="lg:text-[45px] text-[50px] font-montserrat">
+                    <h1
+                        class="lg:text-[45px] text-[50px] font-montserrat"
+                        data-aos="fade-up"
+                    >
                         Selamat Datang Di <span class=" font-extrabold"
                             >Alamon GO</span
                         >
@@ -12,6 +15,8 @@
                     <p
                         class="lg:text-[18px] text-[20px] mt-2 mb-[2.5rem] font-poppins"
                         style="line-height: 1.8rem;"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
                     >
                         Susu tinggi nutrisi dan kalori yang bantu kamu menambah
                         berat badan ideal tanpa ribet. Cocok untuk remaja,
@@ -20,6 +25,8 @@
                     <a
                         href="/"
                         class="px-10 no-underline py-[12px] border border-blue-800 text-white font-semibold rounded-full hover:bg-blue-800 hover:text-white transition duration-500"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
                     >
                         Coba Sekarang
                     </a>
