@@ -25,7 +25,7 @@
                     </h3>
                 </div>
             </div>
-            <div class=" col-md-12">
+            <div class=" col-md-12" data-aos="fade-up" data-aos-delay="300">
                 <div class="brand-carousel">
                     <div class="logo-track">
                         <div class="logo-items mr-10">
