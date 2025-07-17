@@ -10,12 +10,13 @@
     <div class="absolute inset-0 bg-black opacity-75 z-20"></div>
     <div
         class="absolute inset-0 z-30 flex items-center justify-center text-white"
+        data-aos="fade-down"
     >
         <h1 class="text-5xl font-bold mt-16">Tentang Kami</h1>
     </div>
 </div>
 
-<section class="mt-10 mb-24 w-full lg:h-[100vh]">
+<section class="mt-10 mb-24 w-full lg:h-[100vh]" data-aos="fade-up">
     <div
         class="container bg-white rounded-3xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
@@ -27,14 +28,22 @@
         <hr class="h-[2x] bg-black w-full p-0" />
 
         <div class="row p-20">
-            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+            <div
+                class="col-12 col-lg-6 mb-4 mb-lg-0"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
                 <img
                     src="storage/image/logos-bg.png"
                     alt="logos"
                     class="w-full lg:w-[80%] rounded-2xl"
                 />
             </div>
-            <div class="col-12 col-lg-6">
+            <div
+                class="col-12 col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay="500"
+            >
                 <p class="font-montserrat">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Cumque velit nam explicabo esse, fuga facilis, numquam

@@ -11,7 +11,7 @@
 </script>
 
 <section class="brand-section w-100 h-auto bg-[#1f2122] md:w-full">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="col">
             <div class="col-md-12">
                 <div class="company-des w-[750px] pt-5">
