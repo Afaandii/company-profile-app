@@ -1,121 +1,183 @@
 <section
-    class="w-full min-h-[50vh] md:w-full md:min-h-[100vh] flex justify-center items-center"
+    class="w-full min-h-[50vh] lg:w-full lg:h-[100vh] flex justify-center items-center"
 >
-    <div
-        class="mx-auto bg-white p-3 w-[95%] rounded-xl"
-        style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
-    >
-        <div class="ml-2 mb-4">
-            <h1 class="font-poppins font-semibold text-lg md:text-3xl">
-                Berita Dan Artikel
-            </h1>
-        </div>
+    <div class="mx-auto bg-white p-3 w-[95%] rounded-xl shadow-sm">
         <div
             class="flex flex-col lg:flex-row w-full lg:justify-between lg:items-center"
         >
             <!-- first news -->
             <div
-                class="bg-white w-full lg:w-[580px] h-[380px] rounded-2xl flex items-center justify-center mb-4"
-                style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
+                class="bg-white w-full lg:w-[720px] h-[540px] rounded-2xl flex flex-col items-center justify-center shadow-sm overflow-auto"
             >
-                <div class="card w-[850px] lg:w-[550px]">
+                <div class="self-start ml-8 mt-2 mb-3">
+                    <h1
+                        class="font-poppins text-left font-bold text-lg md:text-4xl"
+                    >
+                        Berita Terbaru
+                    </h1>
+                </div>
+                <div class="w-[850px] lg:w-[660px]">
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        class="card-img-top h-[250px]"
+                        class="w-full h-[350px] rounded-2xl"
                         alt="foto.png"
                     />
-                    <div class="card-body p-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            This is a wider card with supporting text below as a
-                            natural lead-in to additional content. This content
-                            is a little bit longer.
-                        </p>
+                    <div class="card-body p-2 mt-2">
+                        <h1 class="card-title">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quia dolorem consequuntur laborum veniam
+                            aspernatur saepe iusto fuga
+                        </h1>
+                        <a
+                            href="/"
+                            class="text-red-500 z-10 text-[16px] no-underline relative group inline-block hover:text-blue-800"
+                        >
+                            Lebih Lanjut
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-[80px] z-0"
+                            ></span>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <!-- side news -->
             <div
-                class="bg-white w-full h-[760px] lg:w-[480px] lg:h-[440px] flex flex-col gap-3 items-center justify-center rounded-xl"
-                style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
+                class="bg-white w-full h-[760px] lg:w-[420px] lg:h-[540px] flex flex-col items-center justify-center rounded-xl shadow-sm gap-2"
             >
-                <div class="card w-[95%] lg:w-[450px]">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                class="img-fluid rounded-start h-[600px]"
-                                alt="foto.png"
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 ml-2">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                </p>
+                <div
+                    class="self-start ml-5 flex gap-20 items-center justify-center"
+                >
+                    <h1
+                        class="font-poppins text-left font-bold text-lg md:text-3xl"
+                    >
+                        Berita Lainnya
+                    </h1>
+                    <a
+                        href="/"
+                        class="no-underline text-red-500 relative inline-block hover:text-blue-500 group text-[16px]"
+                        >See More
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-[80px] z-0"
+                        ></span>
+                    </a>
+                </div>
+                <div class="border rounded-lg p-3">
+                    <div class="w-[95%] lg:w-[350px]">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img
+                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                    class="img-fluid rounded-lg"
+                                    alt="foto.png"
+                                    style="height: 75px;"
+                                />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-0 ml-2">
+                                    <h1 class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                    </h1>
+                                    <a
+                                        href="/"
+                                        class="no-underline relative inline-block group text-red-500 hover:text-blue-800"
+                                        >Lebih Lanjut
+                                        <span
+                                            class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-[80px] z-0"
+                                        ></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card w-[95%] lg:w-[450px]">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                class="img-fluid rounded-start"
-                                alt="foto.png"
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 ml-2">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                </p>
+                <div class="rounded-lg p-3 border">
+                    <div class="w-[95%] lg:w-[350px]">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img
+                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                    class="img-fluid rounded-lg"
+                                    alt="foto.png"
+                                    style="height: 75px;"
+                                />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-0 ml-2">
+                                    <h1 class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                    </h1>
+                                    <a
+                                        href="/"
+                                        class="no-underline text-red-500 relative inline-block group hover:text-blue-800"
+                                        >Lebih Lanjut
+                                        <span
+                                            class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-[80px] z-0"
+                                        ></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card w-[95%] lg:w-[450px]">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                class="img-fluid rounded-start"
-                                alt="foto.png"
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 ml-2">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                </p>
+                <div class="rounded-lg p-3 border">
+                    <div class="w-[95%] lg:w-[350px]">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img
+                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                    class="img-fluid rounded-lg"
+                                    alt="foto.png"
+                                    style="height: 75px;"
+                                />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-0 ml-2">
+                                    <h1 class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                    </h1>
+                                    <a
+                                        href="/"
+                                        class="no-underline text-red-500 inline-block relative group hover:text-blue-500"
+                                        >Lebih Lanjut
+                                        <span
+                                            class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-[80px] z-0"
+                                        ></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card w-[95%] lg:w-[450px]">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                class="img-fluid rounded-start"
-                                alt="foto.png"
-                            />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-0 ml-2">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                </p>
+                <div class="rounded-lg p-3 border">
+                    <div class="w-[95%] lg:w-[350px]">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img
+                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                    class="img-fluid rounded-lg"
+                                    alt="foto.png"
+                                    style="height: 75px;"
+                                />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-0 ml-2">
+                                    <h1 class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit.
+                                    </h1>
+                                    <a
+                                        href="/"
+                                        class="no-underline relative group text-red-500 inline-block hover:text-blue-500"
+                                        >Lebih Lanjut
+                                        <span
+                                            class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-[80px] z-0"
+                                        ></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
