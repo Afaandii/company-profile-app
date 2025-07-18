@@ -64,7 +64,7 @@
                         Berita Lainnya
                     </h1>
                     <a
-                        href="/"
+                        href="/news"
                         class="no-underline text-red-500 relative inline-block hover:text-blue-500 group text-[16px]"
                         data-aos="fade-left"
                         data-aos-delay="150"

@@ -17,15 +17,21 @@
                 <div class="company-des w-[750px] pt-5">
                     <h5
                         class="font-poppins text-[15px] text-[#d2691e] font-bold"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
                     >
                         Dipercaya oleh
                     </h5>
-                    <h3 class="font-montserrat text-white text-[2rem] mt-2">
+                    <h3
+                        class="font-montserrat text-white text-[2rem] mt-2"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
                         Ratusan pengguna & toko telah memilih Alamon Go!
                     </h3>
                 </div>
             </div>
-            <div class=" col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <div class=" col-md-12" data-aos="fade-up" data-aos-delay="200">
                 <div class="brand-carousel">
                     <div class="logo-track">
                         <div class="logo-items mr-10">
