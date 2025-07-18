@@ -9,8 +9,40 @@
     });
 </script>
 
+<!-- <nav
+    class="navbar navbar-expand-lg fixed-top bg-black opacity-20 z-10"
+    id="navbar"
+>
+    <div class="container-fluid z-50">
+        <a class="navbar-brand text-white" href="#">Navbar</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="/">Beranda</a
+                >
+                <a class="nav-link text-white" href="/about-us">Tentang Kami</a>
+                <a class="nav-link text-white" href="/news">Berita</a>
+                <a class="nav-link text-white" href="/produk">Produk</a>
+            </div>
+        </div>
+    </div>
+</nav> -->
+
 <nav
-    class="fixed top-0 left-0 w-full h-auto z-50 transition-all duration-500"
+    class="fixed top-0 left-0 w-full navbar-expand-lg h-auto z-50 transition-all duration-500"
     id="navbar"
 >
     <div class="flex justify-evenly align-items-center">

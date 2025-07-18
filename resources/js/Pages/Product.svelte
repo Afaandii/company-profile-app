@@ -31,7 +31,7 @@
                         Produk Kami
                     </h4>
                     <h2
-                        class="text-center font-montserrat font-semibold text-black text-[35px]"
+                        class="text-center font-poppins font-bold text-black text-[35px]"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
