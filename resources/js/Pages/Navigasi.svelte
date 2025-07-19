@@ -9,46 +9,102 @@
     });
 </script>
 
-<!-- <nav
-    class="navbar navbar-expand-lg fixed-top bg-black opacity-20 z-10"
-    id="navbar"
->
-    <div class="container-fluid z-50">
-        <a class="navbar-brand text-white" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg w-full fixed-top" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand ml-0 lg:ml-20" href="/">
+            <img
+                src="storage/image/logo-footer.png"
+                alt="logo"
+                class=" w-36 lg:w-20"
+            />
+        </a>
         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style="--bs-navbar-toggler-icon-bg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 1%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e'); "
         >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" style="width: 5rem; height: 5rem;"
+            ></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a
-                    class="nav-link active text-white"
-                    aria-current="page"
-                    href="/">Beranda</a
-                >
-                <a class="nav-link text-white" href="/about-us">Tentang Kami</a>
-                <a class="nav-link text-white" href="/news">Berita</a>
-                <a class="nav-link text-white" href="/produk">Produk</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div
+                class="w-100 d-lg-flex justify-content-lg-evenly align-items-lg-center"
+            >
+                <ul class="navbar-nav flex-grow-1 justify-content-center gap-4">
+                    <li class="nav-item">
+                        <a
+                            href="/"
+                            class="relative inline-block text-[17px] no-underline text-white font-poppins group"
+                            >Beranda
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
+                            ></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="/about-us"
+                            class="relative inline-block text-[17px] no-underline text-white font-poppins group"
+                            >Tentang Kami
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
+                            ></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="/news"
+                            class="relative inline-block text-[17px] no-underline text-white font-poppins group"
+                            >Berita
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
+                            ></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="/produk"
+                            class="relative inline-block text-[17px] no-underline text-white font-poppins group"
+                            >Produk Kami
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
+                            ></span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="me-20 mt-4 mt-lg-0">
+                    <a
+                        href="http://localhost:8000"
+                        class="relative inline-block text-[17px] no-underline text-white font-poppins group"
+                    >
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fa-regular fa-circle-user text-[23px]"
+                            ></i>
+                            <span>Login</span>
+                        </span>
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"
+                        ></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</nav> -->
+</nav>
 
-<nav
-    class="fixed top-0 left-0 w-full navbar-expand-lg h-auto z-50 transition-all duration-500"
+<!-- <nav
+    class="fixed top-0 left-0 w-full h-auto z-50 transition-all duration-500"
     id="navbar"
 >
     <div class="flex justify-evenly align-items-center">
         <div class="w-20 my-auto">
             <a href="/">
-                <img src="storage/image/logo-footer.png" alt="user.jpg" />
+                <img src="storage/image/logo-footer.png" alt="logo.jpg" />
             </a>
         </div>
         <div class="my-auto">
@@ -112,4 +168,4 @@
             </a>
         </div>
     </div>
-</nav>
+</nav> -->
