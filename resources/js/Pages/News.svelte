@@ -13,7 +13,9 @@
         class="absolute inset-0 z-30 mt-20 flex items-center justify-center text-white"
         data-aos="fade-down"
     >
-        <h1 class="text-5xl font-bold font-poppins">Berita & Blog Kami</h1>
+        <h1 class="text-5xl font-bold font-poppins text-center">
+            Berita & Blog Kami
+        </h1>
     </div>
 </div>
 
@@ -26,7 +28,9 @@
             <h4 class="font-semibold font-montserrat text-[#1f2122] mb-3">
                 Blog Kami
             </h4>
-            <h1 class="font-bold font-poppins text-[50px] text-black">
+            <h1
+                class="font-bold font-poppins text-center text-[50px] text-black"
+            >
                 Blog & Berita Terbaru
             </h1>
         </div>

@@ -23,7 +23,7 @@
         <div class="container">
             <!-- title -->
             <div class="flex flex-col justify-center items-center mb-5">
-                <div class="w-[55%]">
+                <div class="lg:w-[55%]">
                     <h4
                         class="text-center font-semibold font-montserrat text-[23px] mb-3 text-[#1f2122]"
                         data-aos="fade-up"
@@ -31,7 +31,7 @@
                         Produk Kami
                     </h4>
                     <h2
-                        class="text-center font-poppins font-bold text-black text-[35px]"
+                        class="text-center font-poppins font-bold text-black lg:text-[35px]"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
@@ -42,9 +42,9 @@
 
             <!-- card -->
             <div class="row g-0">
-                <div class="flex gap-3">
+                <div class="lg:flex gap-3">
                     <div
-                        class="col-lg-4 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
+                        class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
                         data-aos="fade-up"
                     >
                         <!-- Gambar -->
@@ -76,7 +76,7 @@
                     </div>
 
                     <div
-                        class="col-lg-4 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
+                        class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
@@ -109,7 +109,7 @@
                     </div>
 
                     <div
-                        class="col-lg-4 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
+                        class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
