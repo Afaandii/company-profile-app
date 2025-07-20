@@ -3,15 +3,15 @@
     <div
         class="hero-content text-neutral-content text-center relative z-10 mt-20"
     >
-        <div class="lg:w-[51%] w-[75%] mx-auto">
+        <div class="lg:w-[51%] w-full mx-auto">
             <h1
-                class="lg:text-[45px] text-[50px] font-montserrat"
+                class="lg:text-[45px] text-[35px] font-montserrat"
                 data-aos="fade-up"
             >
                 Selamat Datang Di <span class="font-extrabold">Alamon GO</span>
             </h1>
             <p
-                class="lg:text-[18px] text-[20px] mt-2 mb-[1.5rem] font-poppins leading-7"
+                class="lg:text-[18px] text-[15px] mt-2 mb-[1.5rem] font-poppins leading-7"
                 data-aos="fade-up"
                 data-aos-delay="200"
             >

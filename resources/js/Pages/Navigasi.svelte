@@ -15,7 +15,7 @@
             <img
                 src="storage/image/logo-footer.png"
                 alt="logo"
-                class=" w-36 lg:w-20"
+                class=" w-24 lg:w-20"
             />
         </a>
         <button
@@ -28,7 +28,7 @@
             aria-label="Toggle navigation"
             style="--bs-navbar-toggler-icon-bg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 1%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e'); "
         >
-            <span class="navbar-toggler-icon" style="width: 5rem; height: 5rem;"
+            <span class="navbar-toggler-icon" style="width: 4rem; height: 4rem;"
             ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
