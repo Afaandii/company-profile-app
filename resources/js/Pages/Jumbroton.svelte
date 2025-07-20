@@ -14,7 +14,7 @@
     <div class="container" data-aos="fade-up">
         <div class="col">
             <div class="col-md-12">
-                <div class="company-des w-[750px] pt-5">
+                <div class="company-des lg:w-[750px] pt-5">
                     <h5
                         class="font-poppins text-[15px] text-[#d2691e] font-bold"
                         data-aos="fade-up"
@@ -23,7 +23,7 @@
                         Dipercaya oleh
                     </h5>
                     <h3
-                        class="font-montserrat text-white text-[2rem] mt-2"
+                        class="font-montserrat text-white lg:text-[2rem] mt-2"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
