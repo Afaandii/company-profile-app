@@ -79,7 +79,7 @@
                 </ul>
                 <div class="me-20 mt-4 mt-lg-0">
                     <a
-                        href="http://localhost:8000"
+                        href="/login"
                         class="relative inline-block text-[17px] no-underline text-white font-poppins group"
                     >
                         <span class="inline-flex items-center gap-2">
