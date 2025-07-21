@@ -1,6 +1,9 @@
+import './bootstrap';
+import Alpine from 'alpinejs';
+window.Alpine = Alpine;
+Alpine.start();
 import { createInertiaApp } from '@inertiajs/svelte'
 import { mount } from 'svelte'
-import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "@fortawesome/fontawesome-free";
