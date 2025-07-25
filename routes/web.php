@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleController;
+use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -38,6 +40,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // role tabel
+    Route::get('/role', [RoleController::class, 'index'])->name('role_home');
+    Route::get('/create-role', [RoleController::class, 'create'])->name('form_create_role');
+    Route::post('/store-role', [RoleController::class, 'store'])->name('store_role');
+    Route::get('/edit-role/{id}', [RoleController::class, 'edit'])->name('form-edit-role');
 });
 
 require __DIR__ . '/auth.php';
