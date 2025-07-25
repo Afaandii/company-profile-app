@@ -25,6 +25,9 @@ Route::group([], function () {
     Route::get('/test', function () {
         return Inertia::render('Test');
     });
+    Route::get('/login', function () {
+        return view('auth.login');
+    });
 });
 
 Route::get('/dashboard', function () {
