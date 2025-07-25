@@ -35,24 +35,26 @@
                                     </tr>
                                 </thead>
                                 <tbody class="tbody-dark">
-                                    @php
-                                        $i = 1;
-                                    @endphp
                                     @foreach ($data_role as $role)
                                         <tr>
-                                            <th scope="row">{{ $i }}</th>
+                                            <th scope="row">{{ $loop->iteration }}</th>
                                             <td>
                                                 <a href="{{ route('form-edit-role', $role['id']) }}"
                                                     class="btn btn-warning btn-md mr-2 text-decoration-none">Update</a>
-                                                <a href="" onclick="return confirm('Anda Yakin Mau Hapus Data?')"
-                                                    class="btn btn-danger btn-md text-decoration-none">Delete</a>
+                                                <form action="{{ route('delete_role', $role['id']) }}" method="POST"
+                                                    style="display:inline;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-md"
+                                                        onclick="return confirm('Anda Yakin Mau Hapus Data?')">
+                                                        Delete
+                                                    </button>
+                                                </form>
+
                                             </td>
                                             <td>{{ $role['name'] }}</td>
                                             <td>{{ $role['handle_access'] }}</td>
                                         </tr>
-                                        @php
-                                            $i++;
-                                        @endphp
                                     @endforeach
                                 </tbody>
                             </table>

@@ -14,7 +14,7 @@ class RoleController extends Controller
     {
         return view("role.index", [
             "title_role" => "Manage tabel role",
-            "data_role" => Role::all(),
+            "data_role" => Role::orderBy('id', 'asc')->get(),
         ]);
     }
 
@@ -59,7 +59,10 @@ class RoleController extends Controller
      */
     public function edit(string $id)
     {
-        // 
+        return view('role.edit', [
+            'title_form_edit' => 'Form Edit Role',
+            'data_edit' => Role::where('id', $id)->first(),
+        ]);
     }
 
     /**
@@ -67,7 +70,17 @@ class RoleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validateData = $request->validate([
+            'nama_role' => 'required|max:150',
+            'handle_role' => 'required|max:120',
+        ]);
+
+        Role::where('id', $id)->update([
+            'name' => $validateData['nama_role'],
+            'handle_access' => $validateData['handle_role']
+        ]);
+
+        return redirect()->route('role_home')->with('success', 'Data Berhasil Di Edit');
     }
 
     /**
@@ -75,6 +88,8 @@ class RoleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Role::findOrFail($id)->delete();
+
+        return redirect()->route('role_home')->with('success', 'Data Berhasil DiHapus');
     }
 }

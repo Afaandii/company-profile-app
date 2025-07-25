@@ -46,6 +46,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/create-role', [RoleController::class, 'create'])->name('form_create_role');
     Route::post('/store-role', [RoleController::class, 'store'])->name('store_role');
     Route::get('/edit-role/{id}', [RoleController::class, 'edit'])->name('form-edit-role');
+    Route::put('/update-role/{id}', [RoleController::class, 'update'])->name('update-role');
+    Route::delete('/delete-role/{id}', [RoleController::class, 'destroy'])->name('delete_role');
 });
 
 require __DIR__ . '/auth.php';
