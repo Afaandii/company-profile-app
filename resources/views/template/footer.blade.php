@@ -32,6 +32,24 @@
   <script src="{{ asset('admin_lte/dist/js/demo.js') }}"></script> --}}
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="{{ asset('admin_lte/dist/js/pages/dashboard2.js') }}"></script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const title = document.querySelector('#title');
+          const slug = document.querySelector('#slug');
+
+          if (title) {
+              title.addEventListener('change', function() {
+                  fetch('/checkSlug?name=' + encodeURIComponent(title.value))
+                      .then(response => response.json())
+                      .then(data => {
+                          slug.value = data.slug;
+                      });
+              });
+          }
+      });
+  </script>
+
   </body>
 
   </html>

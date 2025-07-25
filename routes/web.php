@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Models\Role;
@@ -48,6 +49,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit-role/{id}', [RoleController::class, 'edit'])->name('form-edit-role');
     Route::put('/update-role/{id}', [RoleController::class, 'update'])->name('update-role');
     Route::delete('/delete-role/{id}', [RoleController::class, 'destroy'])->name('delete_role');
+
+    // category
+    Route::get('/category',  [CategoryController::class, 'index'])->name('category_home');
+    Route::get('/create-category', [CategoryController::class, 'create'])->name('form-create-kategori');
+    Route::post('/store-category', [CategoryController::class, 'store'])->name('store-category');
+    Route::get('/checkSlug', [CategoryController::class, 'checkSlug']);
 });
 
 require __DIR__ . '/auth.php';
