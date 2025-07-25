@@ -12,7 +12,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return view("role.index", [
+        return view("role.role", [
             "title_role" => "Manage tabel role",
             "data_role" => Role::orderBy('id', 'asc')->get(),
         ]);
