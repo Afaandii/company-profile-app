@@ -3,7 +3,6 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
-use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -55,6 +54,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/create-category', [CategoryController::class, 'create'])->name('form-create-kategori');
     Route::post('/store-category', [CategoryController::class, 'store'])->name('store-category');
     Route::get('/checkSlug', [CategoryController::class, 'checkSlug']);
+    Route::get('/edit-category/{id}', [CategoryController::class, 'edit'])->name('form-edit-category');
+    Route::post('/update-category/{id}', [CategoryController::class, 'update'])->name('update-category');
+    Route::delete('/delete-category/{id}', [CategoryController::class, 'destroy'])->name('delete-category');
 });
 
 require __DIR__ . '/auth.php';

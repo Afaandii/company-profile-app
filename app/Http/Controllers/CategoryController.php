@@ -41,7 +41,7 @@ class CategoryController extends Controller
 
         Categories::create($validateData);
 
-        return redirect()->route('category_home');
+        return redirect()->route('category_home')->with('success', 'Data Berhasil Ditambahkan!');
     }
 
     /**
@@ -57,7 +57,11 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Categories::findOrFail($id);
+        return view('category.edit', [
+            'title' => 'Form Edit Kategori',
+            'data_edit' => compact("category"),
+        ]);
     }
 
     /**
@@ -65,7 +69,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validateData = $request->validate([
+            'name' => 'required|max:150',
+            'slug' => 'max:120',
+        ]);
+
+        Categories::where('id', $id)->update($validateData);
+
+        return redirect()->route('category_home')->with('success', 'Data Berhasil Diupdate!');
     }
 
     /**
@@ -73,7 +84,10 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $find = Categories::findOrFail($id);
+        $find->delete();
+
+        return redirect()->route('category_home')->with('success', 'Data Berhasil Dihapus!');
     }
 
 
