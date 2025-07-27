@@ -17,6 +17,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="close " data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">DataTable Kategori</h3>
@@ -36,9 +44,9 @@
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>
-                                                <a href="{{ route('form-edit-role', $kategori['id']) }}"
+                                                <a href="{{ route('form-edit-category', $kategori['id']) }}"
                                                     class="btn btn-warning btn-md mr-2 text-decoration-none">Update</a>
-                                                <form action="{{ route('delete_role', $kategori['id']) }}"
+                                                <form action="{{ route('delete-category', $kategori['id']) }}"
                                                     method="POST" style="display:inline;">
                                                     @csrf
                                                     @method('DELETE')

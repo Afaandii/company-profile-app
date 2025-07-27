@@ -24,12 +24,12 @@
                                 <div class="form-group">
                                     <label for="title">Nama Kategori</label>
                                     <input type="text" class="form-control" id="title"
-                                        placeholder="Masukan nama kategori" name="name">
+                                        placeholder="Masukan nama kategori" name="name" value="{{ old('name') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="slug">Slug</label>
                                     <input type="text" class="form-control" id="slug" placeholder="Masukan slug"
-                                        name="slug" readonly>
+                                        name="slug" readonly value="{{ old('slug') }}">
                                 </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>

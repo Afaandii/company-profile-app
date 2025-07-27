@@ -43,7 +43,7 @@ class RoleController extends Controller
             'handle_access' => $validateData['handle_acc_role'],
         ]);
 
-        return redirect()->route('role_home')->with('success', 'Data Role Berhasil Ditambah');
+        return redirect()->route('role_home')->with('success', 'Data Berhasil Ditambah');
     }
 
     /**
@@ -80,7 +80,7 @@ class RoleController extends Controller
             'handle_access' => $validateData['handle_role']
         ]);
 
-        return redirect()->route('role_home')->with('success', 'Data Berhasil Di Edit');
+        return redirect()->route('role_home')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -90,6 +90,6 @@ class RoleController extends Controller
     {
         Role::findOrFail($id)->delete();
 
-        return redirect()->route('role_home')->with('success', 'Data Berhasil DiHapus');
+        return redirect()->route('role_home')->with('success', 'Data Berhasil Dihapus');
     }
 }
