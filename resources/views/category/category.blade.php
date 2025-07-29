@@ -30,39 +30,41 @@
                             <h3 class="card-title">DataTable Kategori</h3>
                         </div>
                         <div class="card-body">
-                            <table class="table table-hover table-md-responsive">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Aksi</th>
-                                        <th scope="col">Name Kategori</th>
-                                        <th scope="col">Slug</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="tbody-dark">
-                                    @foreach ($category_list as $kategori)
+                            <div class="table-responsive">
+                                <table class="table table-hover table-md-responsive">
+                                    <thead class="thead-dark">
                                         <tr>
-                                            <th scope="row">{{ $loop->iteration }}</th>
-                                            <td>
-                                                <a href="{{ route('form-edit-category', $kategori['id']) }}"
-                                                    class="btn btn-warning btn-md mr-2 text-decoration-none">Update</a>
-                                                <form action="{{ route('delete-category', $kategori['id']) }}"
-                                                    method="POST" style="display:inline;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-md"
-                                                        onclick="return confirm('Anda Yakin Mau Hapus Data?')">
-                                                        Delete
-                                                    </button>
-                                                </form>
-
-                                            </td>
-                                            <td>{{ $kategori['name'] }}</td>
-                                            <td>{{ $kategori['slug'] }}</td>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Aksi</th>
+                                            <th scope="col">Name Kategori</th>
+                                            <th scope="col">Slug</th>
                                         </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody class="tbody-dark">
+                                        @foreach ($category_list as $kategori)
+                                            <tr>
+                                                <th scope="row">{{ $loop->iteration }}</th>
+                                                <td>
+                                                    <a href="{{ route('form-edit-category', $kategori['id']) }}"
+                                                        class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2">Update</a>
+                                                    <form action="{{ route('delete-category', $kategori['id']) }}"
+                                                        method="POST" style="display:inline;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger btn-md"
+                                                            onclick="return confirm('Anda Yakin Mau Hapus Data?')">
+                                                            Delete
+                                                        </button>
+                                                    </form>
+
+                                                </td>
+                                                <td>{{ $kategori['name'] }}</td>
+                                                <td>{{ $kategori['slug'] }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
