@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserAccessController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -41,14 +42,17 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // role tabel
     Route::prefix('settings')->group(function () {
+        // role tabel
         Route::get('/role', [RoleController::class, 'index'])->name('role_home');
         Route::get('/create-role', [RoleController::class, 'create'])->name('form_create_role');
         Route::post('/store-role', [RoleController::class, 'store'])->name('store_role');
         Route::get('/edit-role/{id}', [RoleController::class, 'edit'])->name('form-edit-role');
         Route::put('/update-role/{id}', [RoleController::class, 'update'])->name('update-role');
         Route::delete('/delete-role/{id}', [RoleController::class, 'destroy'])->name('delete_role');
+
+        // user access
+        Route::get('/user-access', [UserAccessController::class, 'index'])->name('user-access');
     });
 
     // category
