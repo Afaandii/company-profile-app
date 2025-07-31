@@ -49,17 +49,18 @@
                                                 <td>{{ $user['name'] }}</td>
                                                 <td>{{ $user['email'] }}</td>
                                                 <td>
-                                                    {{-- <a href="{{ route('form-edit-user', $user['id']) }}"
-                                                    class="btn btn-warning btn-md mr-2 text-decoration-none">Update</a>
-                                                <form action="{{ route('delete_user', $user['id']) }}" method="POST"
-                                                    style="display:inline;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-md"
-                                                        onclick="return confirm('Anda Yakin Mau Hapus Data?')">
-                                                        Delete
-                                                    </button>
-                                                </form> --}}
+                                                    <a href="{{ route('form-edit-user-access', $user['id']) }}"
+                                                        class="btn btn-warning btn-md mr-2 text-decoration-none"><i
+                                                            class="fa-solid fa-pen-to-square"></i></a>
+                                                    <form action="{{ route('delete-user-access', $user['id']) }}"
+                                                        method="POST" style="display:inline;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger btn-md"
+                                                            onclick="return confirm('Anda Yakin Mau Hapus Data?')">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
