@@ -17,7 +17,7 @@ class RoleController extends Controller
     {
         return view("role.role", [
             "title_role" => "Manage tabel role",
-            "data_role" => Role::orderBy('id', 'asc')->get(),
+            "data_role" => Role::where('id', '!=', '1')->orderBy('id', 'asc')->get(),
         ]);
     }
 

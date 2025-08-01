@@ -15,7 +15,7 @@ use Inertia\Inertia;
 Route::group([], function () {
     Route::get('/', function () {
         return Inertia::render('Home', ['name' => 'Afandi']);
-    });
+    })->name('homepage');
     Route::get('/about-us', function () {
         return Inertia::render('About-us');
     });

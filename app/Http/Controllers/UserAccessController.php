@@ -12,7 +12,7 @@ class UserAccessController extends Controller
     {
         return view('userAccess.userAccess', [
             'title' => 'Manage Table UserAccess',
-            'all_user' => User::all(),
+            'all_user' => User::where('email', '!=', 'admin@gmail.com')->get(),
         ]);
     }
 
