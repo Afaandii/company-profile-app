@@ -10,7 +10,7 @@
             <div class="row mb-2">
                 <div class="col-sm-12 d-flex flex-row justify-content-between align-items-center">
                     <h1 class="m-0 font-weight-bold">{{ $title_role }}</h1>
-                    <a href="{{ route('form_create_role') }}" class="btn btn-danger">Tambah Role</a>
+                    <a href="{{ route('form_create_role') }}" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -48,22 +48,26 @@
                                         @foreach ($data_role as $role)
                                             <tr>
                                                 <th scope="row">{{ $loop->iteration }}</th>
+                                                <td>{{ $role['name'] }}</td>
+                                                <td>{{ $role['handle_access'] }}</td>
                                                 <td>
+                                                    <a href="{{ route('role-permission', $role['id']) }}"
+                                                        class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2"><i
+                                                            class="fa-solid fa-key"></i></a>
                                                     <a href="{{ route('form-edit-role', $role['id']) }}"
-                                                        class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2">Update</a>
+                                                        class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2"><i
+                                                            class="fa-solid fa-pen-to-square"></i></a>
                                                     <form action="{{ route('delete_role', $role['id']) }}"
                                                         method="POST" style="display:inline;">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger btn-md"
                                                             onclick="return confirm('Anda Yakin Mau Hapus Data?')">
-                                                            Delete
+                                                            <i class="fa-solid fa-trash-can"></i>
                                                         </button>
                                                     </form>
 
                                                 </td>
-                                                <td>{{ $role['name'] }}</td>
-                                                <td>{{ $role['handle_access'] }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
