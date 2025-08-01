@@ -39,9 +39,9 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Aksi</th>
                                             <th scope="col">Name Role</th>
                                             <th scope="col">Handle Access</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody class="tbody-dark">
