@@ -48,20 +48,6 @@
                                     </div>
                                 </div>
 
-                                {{-- Permission Access --}}
-                                <div class="col-12 mb-3 p-0">
-                                    <h5 class="mb-2 fw-bold">User Permission</h5>
-                                    @foreach ($permissions as $permission)
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input permission-checkbox" type="checkbox"
-                                                id="perm-{{ $permission->id }}" data-role-id="{{ $data_edit->role_id }}"
-                                                data-permission-id="{{ $permission->id }}"
-                                                {{ in_array($permission->id, $current_permissions) ? 'checked' : '' }}>
-                                            <label class="form-check-label"
-                                                for="perm-{{ $permission->id }}">{{ ucfirst(str_replace('-', ' ', $permission->name)) }}</label>
-                                        </div>
-                                    @endforeach
-                                </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                     <a href="{{ route('user-access') }}" class="btn btn-info">Kembali</a>

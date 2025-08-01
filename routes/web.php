@@ -50,13 +50,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit-role/{id}', [RoleController::class, 'edit'])->name('form-edit-role');
         Route::put('/update-role/{id}', [RoleController::class, 'update'])->name('update-role');
         Route::delete('/delete-role/{id}', [RoleController::class, 'destroy'])->name('delete_role');
+        Route::get('/role-permission/{id}', [RoleController::class, 'permission'])->name('role-permission');
+        Route::post('/user-access-permission-toggle', [RoleController::class, 'toggle'])->name('role.permission.toggle');
 
         // user access
         Route::get('/user-access', [UserAccessController::class, 'index'])->name('user-access');
         Route::get('/edit-user-access/{id}', [UserAccessController::class, 'edit'])->name('form-edit-user-access');
         Route::put('update-user-access/{id}', [UserAccessController::class, 'update'])->name('update-user-access');
         Route::delete('delete-user-access/{id}', [UserAccessController::class, 'destroy'])->name('delete-user-access');
-        Route::post('/user-access-permission-toggle', [UserAccessController::class, 'toggle'])->name('role.permission.toggle');
     });
 
     // category

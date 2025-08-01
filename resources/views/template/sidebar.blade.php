@@ -108,14 +108,14 @@
                             <a href="{{ route('role_home') }}"
                                 class="nav-link {{ Route::is('role_home') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Role</p>
+                                <p>Role & Access</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('user-access') }}"
                                 class="nav-link {{ Route::is('user-access') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>User & Access</p>
+                                <p>User</p>
                             </a>
                         </li>
                     </ul>

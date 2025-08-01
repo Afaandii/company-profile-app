@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Permissions;
 use App\Models\Role;
+use App\Models\RolePermissions;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -91,5 +94,41 @@ class RoleController extends Controller
         Role::findOrFail($id)->delete();
 
         return redirect()->route('role_home')->with('success', 'Data Berhasil Dihapus');
+    }
+
+    public function permission(int $id)
+    {
+        $role = Role::findOrFail($id);
+        $current = RolePermissions::where('role_id', $role->id)->pluck('permission_id')->toArray();
+        return view('role.permission', [
+            'title' => 'Manage Role Permission',
+            'permissions' => Permissions::all(),
+            'current_permissions' => $current,
+            'data_edit' => $role,
+        ]);
+    }
+
+    // input check permission function
+    public function toggle(Request $request)
+    {
+        $request->validate([
+            'role_id' => 'required|integer',
+            'permission_id' => 'required|integer',
+            'action' => 'required|in:attach,detach',
+        ]);
+
+        if ($request->action === 'attach') {
+            RolePermissions::firstOrCreate([
+                'role_id' => $request->role_id,
+                'permission_id' => $request->permission_id,
+            ]);
+            return response()->json(['message' => 'Permission attached']);
+        } else {
+            RolePermissions::where([
+                'role_id' => $request->role_id,
+                'permission_id' => $request->permission_id,
+            ])->delete();
+            return response()->json(['message' => 'Permission detached']);
+        }
     }
 }
