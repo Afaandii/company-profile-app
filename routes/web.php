@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit-user-access/{id}', [UserAccessController::class, 'edit'])->name('form-edit-user-access');
         Route::put('update-user-access/{id}', [UserAccessController::class, 'update'])->name('update-user-access');
         Route::delete('delete-user-access/{id}', [UserAccessController::class, 'destroy'])->name('delete-user-access');
+        Route::post('/user-access-permission-toggle', [UserAccessController::class, 'toggle'])->name('role.permission.toggle');
     });
 
     // category

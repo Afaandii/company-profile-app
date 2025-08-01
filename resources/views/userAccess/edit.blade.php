@@ -18,28 +18,31 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('update-role', $data_edit->id) }}" method="POST">
+                            <form action="{{ route('update-user-access', $data_edit->id) }}" method="POST">
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group">
                                     <label for="formGroupExampleInput">Username</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="Masukan nama role" name="nama_role" value="{{ $data_edit->name }}">
+                                        placeholder="Masukan Username" name="name" value="{{ $data_edit->name }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="formGroupExampleInput2">Email</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput2"
-                                        placeholder="Handle Access" name="handle_role" value="{{ $data_edit->email }}">
+                                        placeholder="Masukan Email" name="email" value="{{ $data_edit->email }}">
                                 </div>
                                 <div class="col-12 m-0 p-0">
                                     <div class="form-group">
-                                        <label for="provinsi_id">
+                                        <label for="role">
                                             Roles
                                         </label>
-                                        <select name="provinsi_id" id="provinsi_id" class="form-control">
+                                        <select name="role_id" id="role" class="form-control">
                                             <option value="">Pilih Role</option>
                                             @foreach ($roles as $role)
-                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                                <option value="{{ $role->id }}"
+                                                    {{ $role->id == $data_edit->role_id ? 'selected' : '' }}>
+                                                    {{ $role->name }}
+                                                </option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -48,27 +51,20 @@
                                 {{-- Permission Access --}}
                                 <div class="col-12 mb-3 p-0">
                                     <h5 class="mb-2 fw-bold">User Permission</h5>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="show" name="show">
-                                        <label class="form-check-label" for="show">Show App</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="create" name="create">
-                                        <label class="form-check-label" for="create">Create App</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="edit" name="edit">
-                                        <label class="form-check-label" for="edit">Edit App</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="delete" name="delete">
-                                        <label class="form-check-label" for="delete">Delete App</label>
-                                    </div>
+                                    @foreach ($permissions as $permission)
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input permission-checkbox" type="checkbox"
+                                                id="perm-{{ $permission->id }}" data-role-id="{{ $data_edit->role_id }}"
+                                                data-permission-id="{{ $permission->id }}"
+                                                {{ in_array($permission->id, $current_permissions) ? 'checked' : '' }}>
+                                            <label class="form-check-label"
+                                                for="perm-{{ $permission->id }}">{{ ucfirst(str_replace('-', ' ', $permission->name)) }}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
-
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
-                                    <a href="{{ route('role_home') }}" class="btn btn-info">Kembali</a>
+                                    <a href="{{ route('user-access') }}" class="btn btn-info">Kembali</a>
                                 </div>
                             </form>
                         </div>

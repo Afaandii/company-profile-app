@@ -50,6 +50,32 @@
       });
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $('.permission-checkbox').on('change', function() {
+          const roleId = $(this).data('role-id');
+          const permissionId = $(this).data('permission-id');
+          const isChecked = $(this).is(':checked');
+
+          $.ajax({
+              url: '{{ route('role.permission.toggle') }}',
+              method: 'POST',
+              data: {
+                  _token: '{{ csrf_token() }}',
+                  role_id: roleId,
+                  permission_id: permissionId,
+                  action: isChecked ? 'attach' : 'detach'
+              },
+              success: function(res) {
+                  console.log(res.message);
+              },
+              error: function(err) {
+                  console.error('Error:', err);
+              }
+          });
+      });
+  </script>
+
 
   </body>
 
