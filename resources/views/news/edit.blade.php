@@ -28,17 +28,31 @@
                                         id="title" placeholder="Masukan title news" name="title"
                                         value="{{ $data_news->title }}">
                                     @error('title')
-                                        {{ $message }}
+                                        <div class=" invalid-feedback">
+                                            {{ $message }}
+                                        </div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="slug">Slug</label>
-                                    <input type="text" class="form-control" id="slug" placeholder="Masukan slug"
-                                        name="slug" readonly value="{{ $data_news->slug }}">
+                                    <input type="text"
+                                        class="form-control @error('slug')
+                                        is-invalid
+                                    @enderror"
+                                        id="slug" placeholder="Masukan slug" name="slug" readonly
+                                        value="{{ $data_news->slug }}">
+                                    @error('slug')
+                                        <div class=" invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kategori">Kategori</label>
-                                    <select name="category_id" id="kategori" class="form-control">
+                                    <select name="category_id" id="kategori"
+                                        class="form-control @error('category_id')
+                                        is-invalid
+                                    @enderror">
                                         <option value="">Pilih Kategori</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}"
@@ -47,16 +61,29 @@
                                             </option>
                                         @endforeach
                                     </select>
+                                    @error('category_id')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Content</label>
-                                    <input type="hidden" class="form-control" id="content"
-                                        placeholder="Masukan content" name="content" value="{{ $data_news->content }}">
+                                    <input type="hidden"
+                                        class="form-control @error('content')
+                                        is-invalid
+                                    @enderror"
+                                        id="content" placeholder="Masukan content" name="content"
+                                        value="{{ $data_news->content }}">
                                     <trix-editor input="content"></trix-editor>
+                                    @error('content')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class=" form-group">
                                     <label for="image">Image</label>
-
                                     <input type="hidden" id="imageLama" name="imageLama"
                                         value="{{ $data_news->image }}">
                                     @if ($data_news->image)
@@ -66,10 +93,18 @@
                                         <img class="img-preview img-fluid mb-3 col-sm-3">
                                     @endif
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="image"
-                                            onchange="previewImage()" name="image">
+                                        <input type="file"
+                                            class="custom-file-input @error('image')
+                                            is-invalid
+                                        @enderror"
+                                            id="image" onchange="previewImage()" name="image">
                                         <label class="custom-file-label" for="image">Choose file</label>
                                     </div>
+                                    @error('image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>

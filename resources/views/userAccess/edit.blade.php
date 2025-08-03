@@ -23,20 +23,33 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="formGroupExampleInput">Username</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="Masukan Username" name="name" value="{{ $data_edit->name }}">
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                        id="formGroupExampleInput" placeholder="Masukan Username" name="name"
+                                        value="{{ $data_edit->name }}">
+                                    @error('name')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="formGroupExampleInput2">Email</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                                        placeholder="Masukan Email" name="email" value="{{ $data_edit->email }}">
+                                    <input type="text" class="form-control @error('email') is-invalid @enderror"
+                                        id="formGroupExampleInput2" placeholder="Masukan Email" name="email"
+                                        value="{{ $data_edit->email }}">
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-12 m-0 p-0">
                                     <div class="form-group">
                                         <label for="role">
                                             Roles
                                         </label>
-                                        <select name="role_id" id="role" class="form-control">
+                                        <select name="role_id" id="role"
+                                            class="form-control @error('role_id') is-invalid @enderror">
                                             <option value="">Pilih Role</option>
                                             @foreach ($roles as $role)
                                                 <option value="{{ $role->id }}"
@@ -45,6 +58,11 @@
                                                 </option>
                                             @endforeach
                                         </select>
+                                        @error('role_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
 
