@@ -137,4 +137,18 @@ class NewsController extends Controller
         $slug = SlugService::createSlug(News::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
     }
+
+    public function apiNewsList(Request $request)
+    {
+        $news = News::latest()->take(20)->get();
+
+        return response()->json($news);
+    }
+
+    public function homeNewsList()
+    {
+        $news = News::latest()->take(5)->get();
+
+        return response()->json($news);
+    }
 }
