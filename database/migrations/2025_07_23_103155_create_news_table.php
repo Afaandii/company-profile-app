@@ -17,8 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('title', 50);
             $table->string('slug', 50);
-            $table->string('excerpt', 120);
-            $table->string('content');
+            $table->text('excerpt', 120);
+            $table->text('content');
             $table->binary('image')->nullable();
             $table->timestamps();
 
