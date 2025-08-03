@@ -32,15 +32,25 @@
   <script src="{{ asset('admin_lte/dist/js/demo.js') }}"></script> --}}
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="{{ asset('admin_lte/dist/js/pages/dashboard2.js') }}"></script>
-
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
       document.addEventListener('DOMContentLoaded', function() {
+          const name = document.querySelector('#name');
           const title = document.querySelector('#title');
           const slug = document.querySelector('#slug');
 
-          if (title) {
+          if (name) {
+              name.addEventListener('change', function() {
+                  fetch('/master/checkSlug?name=' + encodeURIComponent(name.value))
+                      .then(response => response.json())
+                      .then(data => {
+                          slug.value = data.slug;
+                      });
+              });
+          } else if (title) {
               title.addEventListener('change', function() {
-                  fetch('/checkSlug?name=' + encodeURIComponent(title.value))
+                  fetch('/transaksi/checkSlug?title=' + encodeURIComponent(title.value))
                       .then(response => response.json())
                       .then(data => {
                           slug.value = data.slug;
@@ -48,10 +58,7 @@
               });
           }
       });
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
+
       $('.permission-checkbox').on('change', function() {
           const roleId = $(this).data('role-id');
           const permissionId = $(this).data('permission-id');
@@ -74,9 +81,27 @@
               }
           });
       });
+
+      //untuk menutup aksi dari file upload di input body trix editor diatas yang sudah di disable di layouts main blade dashboard
+      document.addEventListener('trix-toolbar', function(e) {
+          e.preventDefault()
+      })
+
+      //  fungsi untuk menampilkan gambar setelah memilih gambar pada input upload
+      function previewImage() {
+          const image = document.querySelector('#image');
+          const imgPreview = document.querySelector('.img-preview');
+
+          imgPreview.style.display = 'block';
+
+          const oFReader = new FileReader();
+          oFReader.readAsDataURL(image.files[0]);
+
+          oFReader.onload = function(oFREvent) {
+              imgPreview.src = oFREvent.target.result;
+          }
+      }
   </script>
-
-
   </body>
 
   </html>

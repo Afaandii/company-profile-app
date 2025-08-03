@@ -22,8 +22,8 @@
                                 @method('POST')
                                 @csrf
                                 <div class="form-group">
-                                    <label for="title">Nama Kategori</label>
-                                    <input type="text" class="form-control" id="title"
+                                    <label for="name">Nama Kategori</label>
+                                    <input type="text" class="form-control" id="name"
                                         placeholder="Masukan nama kategori" name="name" value="{{ old('name') }}">
                                 </div>
                                 <div class="form-group">

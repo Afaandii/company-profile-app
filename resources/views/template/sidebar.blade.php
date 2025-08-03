@@ -60,7 +60,7 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                <li class="nav-item">
+                <li class="nav-item {{ request()->is('transaksi/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link ">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -70,7 +70,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
+                            <a href="{{ route('news-home') }}"
+                                class="nav-link {{ Route::is('news-home') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>News</p>
                             </a>

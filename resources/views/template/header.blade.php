@@ -16,6 +16,24 @@
     <link rel="stylesheet" href="{{ asset('admin_lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin_lte/dist/css/adminlte.min.css') }}">
+
+    {{-- trix editor --}}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+    <style>
+        trix-editor {
+            min-height: 150px;
+        }
+
+        trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+        }
+
+        trix-toolbar [data-trix-action="link"] {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">

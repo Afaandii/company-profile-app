@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserAccessController;
@@ -60,7 +61,7 @@ Route::middleware('auth')->group(function () {
         Route::delete('delete-user-access/{id}', [UserAccessController::class, 'destroy'])->name('delete-user-access');
     });
 
-    // category
+    // master
     // prefix buat open-menu dan activce class sidebar
     Route::prefix('master')->group(function () {
         Route::get('/category',  [CategoryController::class, 'index'])->name('category_home');
@@ -70,6 +71,17 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit-category/{id}', [CategoryController::class, 'edit'])->name('form-edit-category');
         Route::post('/update-category/{id}', [CategoryController::class, 'update'])->name('update-category');
         Route::delete('/delete-category/{id}', [CategoryController::class, 'destroy'])->name('delete-category');
+    });
+
+    // Transaksi
+    Route::prefix('transaksi')->group(function () {
+        Route::get('/news', [NewsController::class, 'index'])->name('news-home');
+        Route::get('/create-news', [NewsController::class, 'create'])->name('form-create-news');
+        Route::post('/store-news', [NewsController::class, 'store'])->name('store-news');
+        Route::get('/edit-news/{id}', [NewsController::class, 'edit'])->name('form-edit-news');
+        Route::put('/update-news/{id}', [NewsController::class, 'update'])->name('update-news');
+        Route::delete('/delete-news/{id}', [NewsController::class, 'destroy'])->name('delete-news');
+        Route::get('/checkSlug', [NewsController::class, 'checkSlug']);
     });
 });
 

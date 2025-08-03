@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('slug', 50);
             $table->string('excerpt', 120);
             $table->string('content');
-            $table->binary('image-cover')->nullable();
-            $table->string('publish_at');
+            $table->binary('image')->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
