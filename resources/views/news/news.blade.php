@@ -1,5 +1,8 @@
 @include('template.header')
 @include('template.sidebar')
+@php
+    use Illuminate\Support\Str;
+@endphp
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -51,7 +54,7 @@
                                                 <td>{{ $news['title'] }}</td>
                                                 <td>{{ $news['slug'] }}</td>
                                                 <td>{{ $news['excerpt'] }}</td>
-                                                <td>{{ $news['content'] }}</td>
+                                                <td>{{ Str::limit(strip_tags($news['content']), 80, '...') }}</td>
                                                 <td><img src="{{ asset('storage/' . $news['image']) }}" alt="image"
                                                         width="120">
                                                 </td>

@@ -23,14 +23,26 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="formGroupExampleInput">Nama Role</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="Masukan nama role" name="nama_role" value="{{ $data_edit->name }}">
+                                    <input type="text" class="form-control @error('nama_role') is-invalid  @enderror"
+                                        id="formGroupExampleInput" placeholder="Masukan nama role" name="nama_role"
+                                        value="{{ $data_edit->name }}">
+                                    @error('nama_role')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="formGroupExampleInput2">Handle Access</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                                        placeholder="Handle Access" name="handle_role"
+                                    <input type="text"
+                                        class="form-control @error('handle_role') is-invalid @enderror"
+                                        id="formGroupExampleInput2" placeholder="Handle Access" name="handle_role"
                                         value="{{ $data_edit->handle_access }}">
+                                    @error('handle_role')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>

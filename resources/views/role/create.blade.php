@@ -22,13 +22,24 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="formGroupExampleInput">Nama Role</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="Masukan nama role" name="nama_role">
+                                    <input type="text" class="form-control @error('nama_role') is-invalid @enderror"
+                                        id="formGroupExampleInput" placeholder="Masukan nama role" name="nama_role">
+                                    @error('nama_role')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="formGroupExampleInput2">Handle Access</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                                        placeholder="Handle Access" name="handle_acc_role">
+                                    <input type="text"
+                                        class="form-control @error('handle_acc_role') is-invalid @enderror"
+                                        id="formGroupExampleInput2" placeholder="Handle Access" name="handle_acc_role">
+                                    @error('handle_acc_role')
+                                        <div class=" invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
