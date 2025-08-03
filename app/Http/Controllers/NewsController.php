@@ -39,11 +39,11 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'title' => 'required|max:20',
-            'slug' => 'max:20',
+            'title' => 'required|max:50',
+            'slug' => 'required|unique:news,slug',
             'category_id' => 'required|integer',
-            'content' => 'required|max:255',
-            'image' => 'required|file|mimes:jpg,jpeg,png,webp|max:2550',
+            'content' => 'required|string',
+            'image' => 'required|file|mimes:jpg,jpeg,png,webp|max:5120',
             'user_id' => 'integer',
         ]);
 
@@ -91,9 +91,9 @@ class NewsController extends Controller
         }
 
         $validateData = $request->validate([
-            'title' => 'required|max:20',
+            'title' => 'required|max:50',
             'category_id' => 'required|integer',
-            'content' => 'required|max:255',
+            'content' => 'required|string',
             'image' => 'nullable|file|mimes:jpg,jpeg,png,webp|max:2550',
             'user_id' => 'integer',
         ]);
@@ -127,7 +127,9 @@ class NewsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        News::findOrFail($id)->delete();
+
+        return redirect()->route('news-home')->with('success', 'Data Berhasil Dihapus!');
     }
 
     public function checkSlug(Request $request)
