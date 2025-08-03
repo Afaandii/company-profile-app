@@ -19,21 +19,35 @@
                     <div class="card">
                         <div class="card-body">
                             <form action="{{ route('store-news') }}" method="POST" enctype="multipart/form-data">
-                                @method('POST')
                                 @csrf
                                 <div class="form-group">
                                     <label for="title">Title</label>
-                                    <input type="text" class="form-control" id="title"
-                                        placeholder="Masukan title news" name="title" value="{{ old('title') }}">
+                                    <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                        id="title" placeholder="Masukan title news" name="title"
+                                        value="{{ old('title') }}">
+                                    @error('title')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="slug">Slug</label>
-                                    <input type="text" class="form-control" id="slug" placeholder="Masukan slug"
-                                        name="slug" readonly value="{{ old('slug') }}">
+                                    <input type="text" class="form-control @error('slug') is-invalid @enderror"
+                                        id="slug" placeholder="Masukan slug" name="slug" readonly
+                                        value="{{ old('slug') }}">
+                                    @error('slug')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="kategori">Kategori</label>
-                                    <select name="category_id" id="kategori" class="form-control">
+                                    <select name="category_id" id="kategori"
+                                        class="form-control @error('category_id')
+                                      is-invalid
+                                    @enderror">
                                         <option value="">Pilih Kategori</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}">
@@ -41,25 +55,47 @@
                                             </option>
                                         @endforeach
                                     </select>
+                                    @error('category_id')
+                                        <div class=" invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Content</label>
-                                    <input type="hidden" class="form-control" id="content"
-                                        placeholder="Masukan content" name="content" value="{{ old('content') }}">
+                                    <input type="hidden"
+                                        class="form-control @error('content')
+                                      is-invalid
+                                    @enderror"
+                                        id="content" placeholder="Masukan content" name="content"
+                                        value="{{ old('content') }}">
                                     <trix-editor input="content"></trix-editor>
+                                    @error('content')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class=" form-group">
                                     <label for="image">Image</label>
                                     <img class="img-preview img-fluid mb-3 col-sm-3">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="image"
-                                            onchange="previewImage()" name="image">
+                                        <input type="file"
+                                            class="custom-file-input @error('image')
+                                          is-invalid
+                                        @enderror"
+                                            id="image" onchange="previewImage()" name="image">
                                         <label class="custom-file-label" for="image">Choose file</label>
+                                        @error('image')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
-                                    <a href="{{ route('role_home') }}" class="btn btn-info">Kembali</a>
+                                    <a href="{{ route('news-home') }}" class="btn btn-info">Kembali</a>
                                 </div>
                             </form>
                         </div>

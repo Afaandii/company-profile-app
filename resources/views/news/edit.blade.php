@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="form-group d-flex justify-content-between align-items-center">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
-                                    <a href="{{ route('role_home') }}" class="btn btn-info">Kembali</a>
+                                    <a href="{{ route('news-home') }}" class="btn btn-info">Kembali</a>
                                 </div>
                             </form>
                         </div>
