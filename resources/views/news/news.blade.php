@@ -55,7 +55,7 @@
                                                 <td><img src="{{ asset('storage/' . $news['image']) }}" alt="image"
                                                         width="120">
                                                 </td>
-                                                <td>
+                                                <td width="15%">
                                                     <a href="{{ route('form-edit-news', $news['id']) }}"
                                                         class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2"><i
                                                             class="fa-solid fa-pen-to-square"></i></a>
