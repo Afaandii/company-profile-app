@@ -39,7 +39,7 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'title' => 'required|max:50',
+            'title' => 'required|max:80',
             'slug' => 'required|unique:news,slug',
             'category_id' => 'required|integer',
             'content' => 'required|string',
@@ -52,7 +52,7 @@ class NewsController extends Controller
         }
 
         $validateData['user_id'] = auth()->guard()->user()->id;
-        $validateData['excerpt'] = Str::limit(strip_tags($request->content), 80);
+        $validateData['excerpt'] = Str::limit(strip_tags($request->content), 120);
 
         News::create($validateData);
 
@@ -91,7 +91,7 @@ class NewsController extends Controller
         }
 
         $validateData = $request->validate([
-            'title' => 'required|max:50',
+            'title' => 'required|max:80',
             'category_id' => 'required|integer',
             'content' => 'required|string',
             'image' => 'nullable|file|mimes:jpg,jpeg,png,webp|max:2550',
@@ -115,7 +115,7 @@ class NewsController extends Controller
         }
 
         $validateData['user_id'] = auth()->guard()->user()->id;
-        $validateData['excerpt'] = Str::limit(strip_tags($request->content), 80);
+        $validateData['excerpt'] = Str::limit(strip_tags($request->content), 120);
 
         News::where('id', $id)->update($validateData);
 

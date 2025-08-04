@@ -6,7 +6,7 @@
     let otherNews = [];
 
     onMount(async () => {
-        const res = await fetch("http://localhost:8000/api/news");
+        const res = await fetch("http://localhost:8000/api/berita");
         const data = await res.json();
         newsList = data;
 
@@ -14,8 +14,6 @@
             latestNews = newsList[0];
             otherNews = newsList.slice(1);
         }
-
-        console.log({ latestNews, otherNews });
     });
 </script>
 
