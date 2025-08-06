@@ -64,7 +64,9 @@ class NewsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $news = News::where('id', $id)->first();
+
+        return response()->json($news);
     }
 
     /**

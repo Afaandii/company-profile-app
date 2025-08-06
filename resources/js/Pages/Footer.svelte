@@ -4,7 +4,7 @@
     <div class="footer sm:footer-horizontal">
         <aside>
             <img
-                src="storage/image/logo-footer.png"
+                src="/storage/image/logo-footer.png"
                 alt="footer-logo"
                 class="w-24 -mt-4 -mb-4"
             />

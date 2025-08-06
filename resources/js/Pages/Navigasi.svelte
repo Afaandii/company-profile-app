@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <a class="navbar-brand ml-0 lg:ml-20" href="/">
             <img
-                src="storage/image/logo-footer.png"
+                src="/storage/image/logo-footer.png"
                 alt="logo"
                 class=" w-24 lg:w-20"
             />
