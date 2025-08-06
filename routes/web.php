@@ -32,6 +32,9 @@ Route::group([], function () {
     Route::get('/login', function () {
         return view('auth.login');
     });
+    Route::get('/detail-news', function () {
+        return Inertia::render('Show');
+    });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
