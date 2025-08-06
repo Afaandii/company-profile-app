@@ -14,6 +14,7 @@
             latestNews = newsList[0];
             otherNews = newsList.slice(1);
         }
+        console.log(latestNews);
     });
 </script>
 
@@ -54,7 +55,7 @@
                                 {latestNews.title}
                             </h1>
                             <a
-                                href="/"
+                                href={`/show-news/${latestNews.id}`}
                                 class="text-red-500 z-10 text-[16px] no-underline relative group inline-block hover:text-blue-800"
                                 data-aos="fade-up"
                                 data-aos-delay="200"

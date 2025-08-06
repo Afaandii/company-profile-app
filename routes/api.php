@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/berita', [NewsController::class, 'homeNewsList']);
 Route::get('/news', [NewsController::class, 'apiNewsList']);
+Route::get('/show-news/{id}', [NewsController::class, 'show']);
