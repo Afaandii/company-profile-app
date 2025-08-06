@@ -80,7 +80,7 @@
                                 {news.excerpt}
                             </p>
                             <a
-                                href="/"
+                                href={`show-news/${news.id}`}
                                 class="text-blue-800 font-semibold no-underline hover:text-red-600 transition duration-300 inline-flex items-center group"
                             >
                                 Read More

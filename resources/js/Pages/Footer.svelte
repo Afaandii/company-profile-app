@@ -26,7 +26,7 @@
                 >
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="" class="text-3xl text-white" aria-label="instagram">
+                <a href="/" class="text-3xl text-white" aria-label="instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
                 <a
@@ -42,23 +42,23 @@
         <!-- ini service -->
         <nav>
             <h6 class="footer-title">Services</h6>
-            <a href="#" class="link link-hover text-white">Branding</a>
-            <a href="#" class="link link-hover text-white">Design</a>
-            <a href="#" class="link link-hover text-white">Marketing</a>
-            <a href="#" class="link link-hover text-white">Advertisement</a>
+            <a href="/" class="link link-hover text-white">Branding</a>
+            <a href="/" class="link link-hover text-white">Design</a>
+            <a href="/" class="link link-hover text-white">Marketing</a>
+            <a href="/" class="link link-hover text-white">Advertisement</a>
         </nav>
         <nav>
             <h6 class="footer-title">Company</h6>
-            <a href="#" class="link link-hover text-white">About us</a>
-            <a href="#" class="link link-hover text-white">Contact</a>
-            <a href="#" class="link link-hover text-white">Jobs</a>
-            <a href="#" class="link link-hover text-white">Press kit</a>
+            <a href="/" class="link link-hover text-white">About us</a>
+            <a href="/" class="link link-hover text-white">Contact</a>
+            <a href="/" class="link link-hover text-white">Jobs</a>
+            <a href="/" class="link link-hover text-white">Press kit</a>
         </nav>
         <nav>
             <h6 class="footer-title">Legal</h6>
-            <a href="#" class="link link-hover text-white">Terms of use</a>
-            <a href="#" class="link link-hover text-white">Privacy policy</a>
-            <a href="#" class="link link-hover text-white">Cookie policy</a>
+            <a href="/" class="link link-hover text-white">Terms of use</a>
+            <a href="/" class="link link-hover text-white">Privacy policy</a>
+            <a href="/" class="link link-hover text-white">Cookie policy</a>
         </nav>
     </div>
 
@@ -70,13 +70,3 @@
         </p>
     </div>
 </footer>
-
-<style>
-    .footer-bg {
-        background-image: url("storage/image/biji-coklat.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-    }
-</style>

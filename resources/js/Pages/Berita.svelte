@@ -117,7 +117,7 @@
                                             {news.title}
                                         </h1>
                                         <a
-                                            href="/"
+                                            href={`/show-news/${news.id}`}
                                             class="no-underline relative inline-block group text-red-500 hover:text-blue-800"
                                             data-aos="fade-left"
                                             data-aos-delay="250"
