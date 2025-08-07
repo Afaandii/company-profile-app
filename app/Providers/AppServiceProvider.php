@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
 
@@ -21,5 +22,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Inertia::setRootView('app');
+
+        Blade::if('canAccess', function ($permission) {
+            $user = auth()->guard()->user();
+            return $user && in_array($permission, $user->role->permissions->pluck('name')->toArray());
+        });
     }
 }

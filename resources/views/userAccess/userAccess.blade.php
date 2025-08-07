@@ -48,9 +48,13 @@
                                                 <td>{{ $user['name'] }}</td>
                                                 <td>{{ $user['email'] }}</td>
                                                 <td>
+                                                    {{-- cek akses user role ini dari appservice provider --}}
+                                                    @canAccess('edit-app')
                                                     <a href="{{ route('form-edit-user-access', $user['id']) }}"
                                                         class="btn btn-warning btn-md mr-2 text-decoration-none"><i
                                                             class="fa-solid fa-pen-to-square"></i></a>
+                                                    @endcanAccess
+                                                    @canAccess('delete-app')
                                                     <form action="{{ route('delete-user-access', $user['id']) }}"
                                                         method="POST" style="display:inline;">
                                                         @csrf
@@ -60,6 +64,7 @@
                                                             <i class="fa-solid fa-trash-can"></i>
                                                         </button>
                                                     </form>
+                                                    @endcanAccess
                                                 </td>
                                             </tr>
                                         @endforeach

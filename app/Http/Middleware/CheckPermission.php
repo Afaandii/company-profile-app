@@ -15,30 +15,24 @@ class CheckPermission
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, $requiredPermission): Response
+    public function handle(Request $request, Closure $next, ...$permissions): Response
     {
         $user = Auth::user();
 
-        if (!$user) {
+        if (!$user || !$user->role) {
             abort(403, 'Unauthorized');
         }
 
-        // Ambil role user
-        $roleId = $user->role_id;
+        // Ambil semua permission user
+        $userPermissions = $user->role->permissions->pluck('name')->toArray();
 
-        // Ambil permission yang dihandle oleh role tsb
-        $permissions = DB::table('role_permissions')
-            ->join('roles', 'role_permissions.role_id', '=', 'roles.id')
-            ->join('permissions', 'role_permissions.permission_id', '=', 'permissions.id')
-            ->where('roles.id', $roleId)
-            ->pluck('permissions.handle_access')
-            ->toArray();
-
-        // Cek apakah permission yg diminta tersedia
-        if (!in_array($requiredPermission, $permissions)) {
-            abort(403, 'Forbidden');
+        // Cek apakah user punya salah satu permission yang dibutuhkan
+        foreach ($permissions as $permission) {
+            if (in_array($permission, $userPermissions)) {
+                return $next($request);
+            }
         }
 
-        return $next($request);
+        abort(403, 'You do not have permission to access this page.');
     }
 }
