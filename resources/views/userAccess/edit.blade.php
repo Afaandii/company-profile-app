@@ -78,6 +78,6 @@
         </div>
     </section>
     <!-- /.content-header -->
-
 </div>
+
 @include('template.footer')

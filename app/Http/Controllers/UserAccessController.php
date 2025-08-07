@@ -18,13 +18,17 @@ class UserAccessController extends Controller
 
     public function edit(int $id)
     {
-        $user = User::findOrFail($id);
+        if (auth()->guard()->user()->role_id != 3) {
+            $user = User::findOrFail($id);
 
-        return view('userAccess.edit', [
-            'title' => 'Form Edit UserAccess',
-            'data_edit' => $user,
-            'roles' => Role::all(),
-        ]);
+            return view('userAccess.edit', [
+                'title' => 'Form Edit UserAccess',
+                'data_edit' => $user,
+                'roles' => Role::all(),
+            ]);
+        } else {
+            abort(403, 'Forbidden');
+        }
     }
 
     public function update(Request $request, int $id)
