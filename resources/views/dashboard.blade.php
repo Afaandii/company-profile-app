@@ -8,7 +8,8 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Dashboard</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur ad beatae neque
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur ad beatae
+                        neque
                         corrupti corporis minima, ipsam, facere nemo ipsum ducimus, impedit maxime dignissimos et
                         delectus perferendis tempore vel nihil.</p>
                 </div><!-- /.col -->
@@ -20,6 +21,7 @@
 </div>
 <!-- /.content-wrapper -->
 @include('template.footer')
+
 {{-- <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
