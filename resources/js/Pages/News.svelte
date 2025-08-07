@@ -1,8 +1,16 @@
 <script>
     import Footer from "./Footer.svelte";
     import Navigasi from "./Navigasi.svelte";
-
     import { onMount } from "svelte";
+
+    function formatTanggal(tanggalStr) {
+        const tanggal = new Date(tanggalStr);
+        return new Intl.DateTimeFormat("id-ID", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+        }).format(tanggal);
+    }
 
     let newsList = [];
 
@@ -67,7 +75,7 @@
                                 class="absolute top-3 left-3 bg-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-lg flex items-center space-x-2"
                             >
                                 <i class="fa-solid fa-calendar-days"></i>
-                                <span>Jan 12 2025</span>
+                                <span>{formatTanggal(news.created_at)}</span>
                             </div>
                         </div>
                         <div class="p-4">

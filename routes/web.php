@@ -5,6 +5,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserAccessController;
+use App\Http\Middleware\CheckPermission;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
