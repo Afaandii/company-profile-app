@@ -10,7 +10,9 @@
             <div class="row mb-2">
                 <div class="col-sm-12 d-flex flex-row justify-content-between align-items-center">
                     <h1 class="m-0 font-weight-bold">{{ $title_role }}</h1>
+                    @canAccess('create-app')
                     <a href="{{ route('form_create_role') }}" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
+                    @endcanAccess
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -51,12 +53,17 @@
                                                 <td>{{ $role['name'] }}</td>
                                                 <td>{{ $role['handle_access'] }}</td>
                                                 <td>
+                                                    @canAccess('create-app')
                                                     <a href="{{ route('role-permission', $role['id']) }}"
                                                         class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2"><i
                                                             class="fa-solid fa-key"></i></a>
+                                                    @endcanAccess
+                                                    @canAccess('edit-app')
                                                     <a href="{{ route('form-edit-role', $role['id']) }}"
                                                         class="btn btn-warning btn-md mr-2 text-decoration-none mb-lg-0 mb-2"><i
                                                             class="fa-solid fa-pen-to-square"></i></a>
+                                                    @endcanAccess
+                                                    @canAccess('delete-app')
                                                     <form action="{{ route('delete_role', $role['id']) }}"
                                                         method="POST" style="display:inline;">
                                                         @csrf
@@ -66,7 +73,7 @@
                                                             <i class="fa-solid fa-trash-can"></i>
                                                         </button>
                                                     </form>
-
+                                                    @endcanAccess
                                                 </td>
                                             </tr>
                                         @endforeach
