@@ -18,7 +18,6 @@
                 `http://localhost:8000/api/show-news/${id}`,
             );
             const data = await res.json();
-            console.log("Data dari API:", data);
             news = data;
         }
     });
