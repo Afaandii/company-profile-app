@@ -14,7 +14,6 @@
             latestNews = newsList[0];
             otherNews = newsList.slice(1);
         }
-        console.log(latestNews);
     });
 </script>
 
@@ -95,7 +94,10 @@
                     </a>
                 </div>
                 {#each otherNews as news}
-                    <div class="border rounded-lg p-3" data-aos="fade-left">
+                    <div
+                        class="border rounded-lg p-3 mb-2 mb-lg-0"
+                        data-aos="fade-left"
+                    >
                         <div class="w-full lg:w-[350px]">
                             <div class="row g-0">
                                 <div class="col-md-4 col-6">

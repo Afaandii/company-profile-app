@@ -18,8 +18,6 @@
         const res = await fetch("http://localhost:8000/api/news");
         const data = await res.json();
         newsList = data;
-
-        console.log(newsList);
     });
 </script>
 

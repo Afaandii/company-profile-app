@@ -49,7 +49,7 @@ Route::middleware(['auth', 'verified', 'permission:show-app'])->group(function (
     Route::prefix('settings')->group(function () {
         // role tabel
         Route::get('/role', [RoleController::class, 'index'])->name('role_home');
-        Route::middleware('permission:create-app', 'permission:delete-app')->group(function () {
+        Route::middleware('permission:create-app, delete-app')->group(function () {
             Route::get('/role-permission/{id}', [RoleController::class, 'permission'])->name('role-permission');
             Route::post('/user-access-permission-toggle', [RoleController::class, 'toggle'])->name('role.permission.toggle');
         });

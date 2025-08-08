@@ -21,13 +21,13 @@
         class="container bg-white rounded-3xl"
         style="box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
     >
-        <h1 class="font-poppins text-center font-semibold pt-3">
+        <h1 class="font-poppins text-center text-[45px] font-semibold pt-3">
             PT ALAMON GO Industri Ltd.
         </h1>
 
         <hr class="h-[2x] bg-black w-full p-0" />
 
-        <div class="row p-20">
+        <div class="row lg:p-20 p-2">
             <div
                 class="col-12 col-lg-6 mb-4 mb-lg-0"
                 data-aos="fade-up"
