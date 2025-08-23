@@ -11,19 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('user_id');
-            $table->string('title', 50);
-            $table->string('slug', 50);
-            $table->text('excerpt', 120);
-            $table->text('content');
-            $table->string('image')->nullable();
+            $table->decimal('price', 8, 2);
+            $table->text('description');
+            $table->string('image_product')->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('product');
     }
 };
