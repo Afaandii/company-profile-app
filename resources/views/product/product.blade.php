@@ -11,7 +11,8 @@
                 <div class="col-sm-12 d-flex flex-row justify-content-between align-items-center">
                     <h1 class="m-0 font-weight-bold">{{ $title }}</h1>
                     @canAccess('create-app')
-                    <a href="{{ route('form-create-news') }}" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
+                    <a href="{{ route('form-create-product') }}" class="btn btn-primary"><i
+                            class="fa-solid fa-plus"></i></a>
                     @endcanAccess
                 </div><!-- /.col -->
             </div><!-- /.row -->
