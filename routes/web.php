@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserAccessController;
@@ -115,6 +116,7 @@ Route::middleware(['auth', 'verified', 'permission:show-app'])->group(function (
     Route::prefix('transaksi')->group(function () {
         Route::get('/news', [NewsController::class, 'index'])->name('news-home');
         Route::get('/checkSlug', [NewsController::class, 'checkSlug']);
+        Route::get('/product', [ProductController::class, 'index'])->name('product-home');
 
         // permission access create-app
         Route::middleware('permission:create-app')->group(function () {
