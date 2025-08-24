@@ -61,7 +61,9 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::where('id', $id)->first();
+
+        return response()->json($product);
     }
 
     /**
@@ -110,6 +112,8 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Product::findOrFail($id)->delete();
+
+        return redirect()->route('product-home')->with('success', 'Data Product Berhasil Dihapus!');
     }
 }
