@@ -119,23 +119,34 @@ Route::middleware(['auth', 'verified', 'permission:show-app'])->group(function (
         Route::get('/product', [ProductController::class, 'index'])->name('product-home');
 
         // permission access create-app
-        Route::middleware('permission:create-app')->group(function () {
+        Route::middleware(['auth', 'verified', 'permission:create-app'])->group(function () {
             // news
             Route::get('/create-news', [NewsController::class, 'create'])->name('form-create-news');
             Route::post('/store-news', [NewsController::class, 'store'])->name('store-news');
+
+            // product
+            Route::get('/create-product', [ProductController::class, 'create'])->name('form-create-product');
+            Route::post('/store-product', [ProductController::class, 'store'])->name('store-product');
         });
 
         // permission access edit-app
-        Route::middleware('permission:edit-app')->group(function () {
+        Route::middleware(['auth', 'verified', 'permission:edit-app'])->group(function () {
             // news
             Route::get('/edit-news/{id}', [NewsController::class, 'edit'])->name('form-edit-news');
             Route::put('/update-news/{id}', [NewsController::class, 'update'])->name('update-news');
+
+            //product
+            Route::get('/edit-product/{id}', [ProductController::class, 'edit'])->name('form-edit-product');
+            Route::put('/update-product', [ProductController::class, 'update'])->name('update-product');
         });
 
         // permission access delete-app
-        Route::middleware('permission:delete-app')->group(function () {
+        Route::middleware(['auth', 'verified', 'permission:delete-app'])->group(function () {
             // news
             Route::delete('/delete-news/{id}', [NewsController::class, 'destroy'])->name('delete-news');
+
+            //product
+            Route::delete('/delete-product/{id}', [ProductController::class, 'destroy'])->name('delete-product');
         });
     });
 });
