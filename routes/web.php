@@ -137,7 +137,7 @@ Route::middleware(['auth', 'verified', 'permission:show-app'])->group(function (
 
             //product
             Route::get('/edit-product/{id}', [ProductController::class, 'edit'])->name('form-edit-product');
-            Route::put('/update-product', [ProductController::class, 'update'])->name('update-product');
+            Route::put('/update-product/{id}', [ProductController::class, 'update'])->name('update-product');
         });
 
         // permission access delete-app
