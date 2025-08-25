@@ -7,6 +7,8 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+use function PHPUnit\Framework\returnSelf;
+
 class ProductController extends Controller
 {
     /**
@@ -115,5 +117,12 @@ class ProductController extends Controller
         Product::findOrFail($id)->delete();
 
         return redirect()->route('product-home')->with('success', 'Data Product Berhasil Dihapus!');
+    }
+
+    public function apiProductList()
+    {
+        $product = Product::with(['category:id,name'])->latest()->take(20)->get();
+
+        return response()->json($product);
     }
 }
