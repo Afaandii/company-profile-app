@@ -1,6 +1,16 @@
 <script>
     import Footer from "./Footer.svelte";
     import Navigasi from "./Navigasi.svelte";
+    import { onMount } from "svelte";
+
+    let productList = [];
+
+    onMount(async () => {
+        const res = await fetch("http://localhost:8000/api/produk");
+        const data = await res.json();
+        productList = data;
+        console.log(productList);
+    });
 </script>
 
 <!-- Navbar -->
@@ -43,103 +53,43 @@
             <!-- card -->
             <div class="row g-0">
                 <div class="lg:flex gap-3">
-                    <div
-                        class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
-                        data-aos="fade-up"
-                    >
-                        <!-- Gambar -->
-                        <div class="px-6 pt-6">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                alt="poto.png"
-                                class="w-full h-full object-cover rounded-xl"
-                            />
+                    {#each productList as product}
+                        <div
+                            class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
+                            data-aos="fade-up"
+                        >
+                            <!-- Gambar -->
+                            <div class="px-6 pt-6">
+                                <img
+                                    src={"/storage/" + product.image_product}
+                                    alt="poto.png"
+                                    class="w-full h-full object-cover rounded-xl"
+                                />
+                            </div>
+
+                            <!-- Konten -->
+                            <div class="bg-[#f3fdfd] px-6 py-4">
+                                <p class="text-gray-500 text-base">
+                                    {product.category.name}
+                                </p>
+                                <h2 class="text-2xl font-bold text-[#0f172a]">
+                                    {product.name}
+                                </h2>
+                                <p
+                                    class="text-cyan-500 text-xl font-semibold mt-2"
+                                >
+                                    {product.price}
+                                </p>
+
+                                <a
+                                    href="/"
+                                    class="inline-block mt-4 px-10 py-2 bg-[#1e3a8a] text-white font-semibold rounded-full hover:bg-blue-400 transition duration-300 no-underline"
+                                >
+                                    Read More
+                                </a>
+                            </div>
                         </div>
-
-                        <!-- Konten -->
-                        <div class="bg-[#f3fdfd] px-6 py-4">
-                            <p class="text-gray-500 text-base">2L 1 Bottle</p>
-                            <h2 class="text-2xl font-bold text-[#0f172a]">
-                                Alamon Go Coklat
-                            </h2>
-                            <p class="text-cyan-500 text-xl font-semibold mt-2">
-                                Rp. 10,000
-                            </p>
-
-                            <a
-                                href="/"
-                                class="inline-block mt-4 px-10 py-2 bg-[#1e3a8a] text-white font-semibold rounded-full hover:bg-blue-400 transition duration-300 no-underline"
-                            >
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                    >
-                        <!-- Gambar -->
-                        <div class="px-6 pt-6">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                alt="poto.png"
-                                class="w-full h-full object-cover rounded-xl"
-                            />
-                        </div>
-
-                        <!-- Konten -->
-                        <div class="bg-[#f3fdfd] px-6 py-4">
-                            <p class="text-gray-500 text-base">2L 1 Bottle</p>
-                            <h2 class="text-2xl font-bold text-[#0f172a]">
-                                Alamon Go Coklat
-                            </h2>
-                            <p class="text-cyan-500 text-xl font-semibold mt-2">
-                                Rp. 10,000
-                            </p>
-
-                            <a
-                                href="/"
-                                class="inline-block mt-4 px-10 py-2 bg-[#1e3a8a] text-white font-semibold rounded-full hover:bg-blue-400 transition duration-300 no-underline"
-                            >
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                    >
-                        <!-- Gambar -->
-                        <div class="px-6 pt-6">
-                            <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                alt="poto.png"
-                                class="w-full h-full object-cover rounded-xl"
-                            />
-                        </div>
-
-                        <!-- Konten -->
-                        <div class="bg-[#f3fdfd] px-6 py-4">
-                            <p class="text-gray-500 text-base">2L 1 Bottle</p>
-                            <h2 class="text-2xl font-bold text-[#0f172a]">
-                                Alamon Go Coklat
-                            </h2>
-                            <p class="text-cyan-500 text-xl font-semibold mt-2">
-                                Rp. 10,000
-                            </p>
-
-                            <a
-                                href="/"
-                                class="inline-block mt-4 px-10 py-2 bg-[#1e3a8a] text-white font-semibold rounded-full hover:bg-blue-400 transition duration-300 no-underline"
-                            >
-                                Read More
-                            </a>
-                        </div>
-                    </div>
+                    {/each}
                 </div>
             </div>
         </div>
