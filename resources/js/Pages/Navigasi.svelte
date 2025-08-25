@@ -7,6 +7,36 @@
             navbar.classList.remove("bg-black/80");
         }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggler = document.querySelector("#navbar .navbar-toggler");
+        const nav = document.getElementById("navbarNav");
+
+        const iconHamburger = `
+      <svg width="40" height="40" viewBox="0 0 30 30" fill="none"
+           xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M4 7h22M4 15h22M4 23h22"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"/>
+      </svg>`;
+
+        const iconClose = `
+      <svg width="40" height="40" viewBox="0 0 30 30" fill="none"
+           xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M6 6L24 24M24 6L6 24"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"/>
+      </svg>`;
+
+        function setIcon(isOpen) {
+            toggler.innerHTML = isOpen ? iconClose : iconHamburger;
+        }
+
+        // Set awal: hamburger
+        setIcon(false);
+
+        // Toggle ikon mengikuti status collapse
+        nav.addEventListener("show.bs.collapse", () => setIcon(true));
+        nav.addEventListener("hide.bs.collapse", () => setIcon(false));
+    });
 </script>
 
 <nav class="navbar navbar-expand-lg w-full fixed-top" id="navbar">
@@ -15,22 +45,21 @@
             <img
                 src="/storage/image/logo-footer.png"
                 alt="logo"
-                class=" w-24 lg:w-20"
+                class="w-24 lg:w-20"
             />
         </a>
+
         <button
-            class="navbar-toggler"
+            class="navbar-toggler p-0 border-0 bg-transparent"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            style="--bs-navbar-toggler-icon-bg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 1%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e'); "
         >
-            <span class="navbar-toggler-icon" style="width: 4rem; height: 4rem;"
-            ></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <div
                 class="w-100 d-lg-flex justify-content-lg-evenly align-items-lg-center"
