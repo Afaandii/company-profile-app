@@ -51,12 +51,11 @@
             </div>
 
             <!-- card -->
-            <div class="row g-0">
-                <div class="lg:flex gap-3">
-                    {#each productList as product}
+            <div class="row g-4">
+                {#each productList as product}
+                    <div class="col-12 col-lg-4 d-flex" data-aos="fade-up">
                         <div
-                            class="col-lg-4 col-12 rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center"
-                            data-aos="fade-up"
+                            class="flex flex-col rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center w-full"
                         >
                             <!-- Gambar -->
                             <div class="px-6 pt-6">
@@ -89,8 +88,8 @@
                                 </a>
                             </div>
                         </div>
-                    {/each}
-                </div>
+                    </div>
+                {/each}
             </div>
         </div>
     </div>
