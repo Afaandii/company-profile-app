@@ -63,7 +63,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::where('id', $id)->first();
+        $product = Product::where('id', $id)->with(['category:id,name'])->first();
 
         return response()->json($product);
     }

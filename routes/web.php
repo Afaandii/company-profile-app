@@ -37,8 +37,8 @@ Route::group([], function () {
     Route::get('/show-news/{id}', function ($id) {
         return Inertia::render('Show-news', ['id' => $id]);
     });
-    Route::get('/show-product', function () {
-        return Inertia::render('Show-product');
+    Route::get('/show-product/{id}', function ($id) {
+        return Inertia::render('Show-product', ['id' => $id]);
     });
 });
 

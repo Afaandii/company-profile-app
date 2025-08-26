@@ -15,3 +15,4 @@ Route::get('/show-news/{id}', [NewsController::class, 'show']);
 
 
 Route::get('/produk', [ProductController::class, 'apiProductList']);
+Route::get('/show-product/{id}', [ProductController::class, 'show']);
