@@ -35,7 +35,10 @@ Route::group([], function () {
         return view('auth.login');
     });
     Route::get('/show-news/{id}', function ($id) {
-        return Inertia::render('Show', ['id' => $id]);
+        return Inertia::render('Show-news', ['id' => $id]);
+    });
+    Route::get('/show-product', function () {
+        return Inertia::render('Show-product');
     });
 });
 

@@ -81,7 +81,7 @@
                                 </p>
 
                                 <a
-                                    href="/"
+                                    href="/show-product"
                                     class="inline-block mt-4 px-10 py-2 bg-[#1e3a8a] text-white font-semibold rounded-full hover:bg-blue-400 transition duration-300 no-underline"
                                 >
                                     Read More
