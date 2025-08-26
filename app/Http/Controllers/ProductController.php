@@ -64,8 +64,16 @@ class ProductController extends Controller
     public function show(string $id)
     {
         $product = Product::where('id', $id)->with(['category:id,name'])->first();
+        // ambil produk lain dengan kategori yang sama
+        $relatedProducts = Product::where('category_id', $product->category_id)
+            ->where('id', '!=', $product->id)
+            ->take(6) // ambil 6 produk saja
+            ->get();
 
-        return response()->json($product);
+        return response()->json([
+            'product' => $product,
+            'related_products' => $relatedProducts,
+        ]);
     }
 
     /**
