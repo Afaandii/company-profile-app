@@ -128,6 +128,10 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item ml-3 mt-2 d-flex align-items-center">
+                    <i class="nav-icon fa-solid fa-arrow-left mr-2"></i>
+                    <a href="/" class="text-white">Back To Home</a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
