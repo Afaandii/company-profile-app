@@ -6,6 +6,13 @@
 *.md diff=markdown
 *.php diff=php
 
+# Tambahan untuk GitHub Linguist
+*.blade.php linguist-language=PHP
+/vendor/* linguist-vendored
+/node_modules/* linguist-vendored
+/public/js/* linguist-vendored
+/public/css/* linguist-vendored
+
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
