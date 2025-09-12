@@ -19,40 +19,55 @@
             );
             const data = await res.json();
             news = data;
+            console.log(news);
         }
     });
 </script>
 
 <!-- navbar -->
-<Navigasi />
-<div class="relative">
+
+<!-- <div class="relative">
     <div class="news relative z-10"></div>
     <div class="absolute inset-0 bg-black opacity-75 z-20"></div>
     <div
-        class="absolute inset-0 z-30 mt-20 flex items-center justify-center text-white"
+        class="absolute inset-0 z-30 mt-20 flex flex-col items-center justify-center text-white"
         data-aos="fade-down"
     >
         <h1 class="text-5xl font-bold font-poppins text-center">
             Detail Berita
         </h1>
     </div>
-</div>
+</div> -->
 
-<section class="w-full h-auto mt-14 mb-14">
+<section class="w-full h-auto mb-14">
+    <div class="hero w-screen">
+        <Navigasi />
+        <div
+            class="h-full w-full bg-black/70 flex flex-col justify-center items-center"
+        >
+            <h1
+                class="text-5xl text-gray-300 font-bold font-poppins text-center"
+                data-aos="fade-down"
+            >
+                Detail Berita
+            </h1>
+            <h4
+                class="text-center font-bold text-gray-300 font-poppins text-2xl lg:text-4xl mt-3 mb-3"
+                data-aos="fade-up"
+            >
+                {news ? news.title : ""}
+            </h4>
+        </div>
+    </div>
+
     <div class="container">
         {#if news}
             <div class="row">
                 <div class=" col-12">
-                    <h1
-                        class="text-center font-bold font-poppins text-4xl mb-4"
-                        data-aos="fade-up"
-                    >
-                        {news.title}
-                    </h1>
                     <img
                         src={"/storage/" + news.image}
                         alt="poto news"
-                        class="rounded-xl object-cover w-full h-auto"
+                        class="rounded-lg object-cover w-full h-auto"
                         data-aos="fade-right"
                         data-aos-delay="100"
                     />
@@ -69,14 +84,3 @@
 
 <!-- footer -->
 <Footer />
-
-<style>
-    .news {
-        background-image: url("/storage/image/biji-coklat.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 60vh;
-    }
-</style>
