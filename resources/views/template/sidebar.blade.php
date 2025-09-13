@@ -10,36 +10,43 @@
     <!-- Sidebar -->
     <div class="sidebar relative">
         <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="{{ asset('admin_lte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                    alt="User Image">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center bg-dark rounded-lg shadow p-3">
+            <!-- Foto profil -->
+            <div class="image me-3">
+                <img src="{{ asset('admin_lte/dist/img/user2-160x160.jpg') }}"
+                    class="img-circle elevation-2 border border-primary" alt="User Image"
+                    style="width: 55px; height: 55px; object-fit: cover;">
             </div>
-            <div class="info absolute">
+
+            <!-- Nama + Dropdown -->
+            <div class="info flex-grow-1">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="d-block w-100 text-start text-white bg-transparent border-0">
+                        <button class="d-flex align-items-center text-white bg-transparent border-0 fw-semibold">
                             {{ Auth::user()->name }}
+                            <i class="fa-solid fa-caret-down ms-2"></i>
                         </button>
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                        <!-- Jangan kasih div tambahan, styling langsung di sini -->
+                        <x-dropdown-link :href="route('profile.edit')"
+                            class="flex items-center text-white hover:bg-secondary px-3 py-2">
+                            <i class="fa-regular fa-user me-2"></i> {{ __('Profile') }}
                         </x-dropdown-link>
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown-link :href="route('logout')"
+                                class="flex items-center text-white hover:bg-secondary px-3 py-2"
                                 onclick="event.preventDefault(); this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                <i class="fa-solid fa-right-from-bracket me-2"></i> {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
                 </x-dropdown>
             </div>
         </div>
-
 
         <!-- SidebarSearch Form -->
         <div class="form-inline">

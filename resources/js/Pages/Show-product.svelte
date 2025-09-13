@@ -352,6 +352,20 @@
                         </div>
                     {/each}
                 </div>
+            {:else}
+                <h2
+                    class="text-2xl lg:text-3xl font-bold mb-8 text-gray-800 tracking-wide"
+                    data-aos="fade-right"
+                >
+                    Produk Serupa
+                </h2>
+                <div class="flex justify-center items-center w-full">
+                    <h1
+                        class="text-bold font-poppins text-red-500 text-center text-2xl"
+                    >
+                        Tidak Ada Produk Yang Serupa
+                    </h1>
+                </div>
             {/if}
         </div>
     {/if}
