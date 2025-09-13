@@ -24,29 +24,14 @@
     });
 </script>
 
-<!-- navbar -->
-
-<!-- <div class="relative">
-    <div class="news relative z-10"></div>
-    <div class="absolute inset-0 bg-black opacity-75 z-20"></div>
-    <div
-        class="absolute inset-0 z-30 mt-20 flex flex-col items-center justify-center text-white"
-        data-aos="fade-down"
-    >
-        <h1 class="text-5xl font-bold font-poppins text-center">
-            Detail Berita
-        </h1>
-    </div>
-</div> -->
-
 <section class="w-full h-auto mb-14">
-    <div class="hero w-screen">
+    <div class="hero-show w-screen">
         <Navigasi />
         <div
-            class="h-full w-full bg-black/70 flex flex-col justify-center items-center"
+            class="h-full w-full bg-black/80 flex flex-col justify-center items-center"
         >
             <h1
-                class="text-5xl text-gray-300 font-bold font-poppins text-center"
+                class="text-3xl text-gray-300 font-bold font-poppins text-center"
                 data-aos="fade-down"
             >
                 Detail Berita
@@ -67,7 +52,7 @@
                     <img
                         src={"/storage/" + news.image}
                         alt="poto news"
-                        class="rounded-lg object-cover w-full h-auto"
+                        class="rounded-md object-cover w-full h-auto"
                         data-aos="fade-right"
                         data-aos-delay="100"
                     />
@@ -76,6 +61,28 @@
                     <p class="mt-2" data-aos="fade-right" data-aos-delay="300">
                         {stripHtmlTags(news.content)}
                     </p>
+                </div>
+            </div>
+        {:else}
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="w-full h-64 bg-gray-300 rounded-md animate-pulse"
+                    ></div>
+                </div>
+                <div class="col-12 mt-4 space-y-2">
+                    <div
+                        class="w-full h-4 bg-gray-300 rounded animate-pulse"
+                    ></div>
+                    <div
+                        class="w-5/6 h-4 bg-gray-300 rounded animate-pulse"
+                    ></div>
+                    <div
+                        class="w-4/6 h-4 bg-gray-300 rounded animate-pulse"
+                    ></div>
+                    <div
+                        class="w-3/6 h-4 bg-gray-300 rounded animate-pulse"
+                    ></div>
                 </div>
             </div>
         {/if}
