@@ -53,7 +53,11 @@
                             >
                                 {latestNews.title}
                             </h1>
-                            <p class="mb-0 pl-2 lg:pl-0">
+                            <p
+                                class="mb-0 pl-2 lg:pl-0"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
                                 {latestNews.excerpt}
                             </p>
                             <a
