@@ -20,13 +20,13 @@
             class="h-full w-full bg-black/80 flex flex-col justify-center items-center pt-10"
         >
             <h4
-                class="text-2xl text-gray-300 font-bold font-poppins text-center"
+                class="text-2xl text-gray-400 font-bold font-poppins text-center"
                 data-aos="fade-down"
             >
                 Produk Kami
             </h4>
             <h2
-                class="w-[380px] lg:w-[850px] text-center font-montserrat font-bold text-gray-300 text-xl lg:text-4xl pt-2"
+                class="w-[380px] lg:w-[850px] text-center font-montserrat font-bold text-gray-400 text-xl lg:text-4xl pt-2"
                 data-aos="fade-up"
                 data-aos-delay="200"
             >

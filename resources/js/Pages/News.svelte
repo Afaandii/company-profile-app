@@ -28,7 +28,7 @@
             class="h-full w-full bg-black/80 flex flex-col justify-center items-center"
         >
             <h1
-                class="text-5xl text-gray-300 font-bold font-poppins text-center"
+                class="text-5xl text-gray-400 font-bold font-poppins text-center"
                 data-aos="fade-down"
             >
                 Berita & Blog Kami
