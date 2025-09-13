@@ -47,15 +47,18 @@
                         />
                         <div class="card-body p-2 mt-2">
                             <h1
-                                class="card-title"
+                                class="card-title pl-2 lg:pl-0"
                                 data-aos="fade-up"
                                 data-aos-delay="150"
                             >
                                 {latestNews.title}
                             </h1>
+                            <p class="mb-0 pl-2 lg:pl-0">
+                                {latestNews.excerpt}
+                            </p>
                             <a
                                 href={`/show-news/${latestNews.id}`}
-                                class="text-red-500 z-10 text-[16px] no-underline relative group inline-block hover:text-blue-800"
+                                class="text-red-500 z-10 text-[16px] no-underline relative group inline-block hover:text-blue-800 pl-2 lg:pl-0"
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
