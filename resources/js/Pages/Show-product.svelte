@@ -174,7 +174,7 @@
                         </div>
 
                         <!-- Tombol Aksi -->
-                        <div class="space-y-3 mb-6">
+                        <div class="space-y-3 mb-2">
                             <button
                                 class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl"
                             >
@@ -197,28 +197,6 @@
                                     Pesan Sekarang Rp {formatPrice(
                                         product.price * quantity,
                                     )}
-                                </div>
-                            </button>
-                            <button
-                                class="w-full border-2 border-blue-600 text-blue-600 py-4 px-6 rounded-xl font-semibold hover:bg-blue-50 transition-colors"
-                            >
-                                <div
-                                    class="flex items-center justify-center gap-2"
-                                >
-                                    <svg
-                                        class="w-5 h-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293a1 1 0 01-1.414 0L1 13M7 13v4a2 2 0 002 2h6a2 2 0 002-2v-4m-6 0a2 2 0 104 0"
-                                        ></path>
-                                    </svg>
-                                    Tambah ke Keranjang
                                 </div>
                             </button>
                         </div>
