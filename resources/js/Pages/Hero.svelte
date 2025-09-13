@@ -20,7 +20,7 @@
                 atlet!
             </p>
             <a
-                href="/"
+                href="/produk"
                 class="inline-block px-10 py-3 border border-blue-800 text-white font-semibold rounded-full hover:bg-blue-800 transition duration-500 no-underline"
                 data-aos="fade-up"
                 data-aos-delay="500"
