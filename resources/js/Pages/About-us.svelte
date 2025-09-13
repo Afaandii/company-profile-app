@@ -9,7 +9,7 @@
     <div class="hero relative z-10"></div>
     <div class="absolute inset-0 bg-black opacity-75 z-20"></div>
     <div
-        class="absolute inset-0 z-30 flex items-center justify-center text-white"
+        class="absolute inset-0 z-30 flex items-center justify-center text-gray-400"
         data-aos="fade-down"
     >
         <h1 class="text-5xl font-bold mt-16">Tentang Kami</h1>
