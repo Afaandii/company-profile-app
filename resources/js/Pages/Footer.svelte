@@ -1,6 +1,4 @@
 <footer class="bg-[#1f2122] text-neutral-content p-10" data-aos="fade">
-    <!-- <div class="absolute inset-0 footer-bg z-10"></div> -->
-    <!-- <div class="absolute inset-0 bg-black opacity-70 z-20"></div> -->
     <div class="footer sm:footer-horizontal">
         <aside>
             <img
@@ -63,7 +61,6 @@
     </div>
 
     <hr class="h-[2px] bg-white my-4 w-full" />
-    <!-- Copyright bagian bawah -->
     <div class="w-full">
         <p class="font-poppins text-white text-[13px]">
             © {new Date().getFullYear()} PT ALAMON GO Industri Ltd

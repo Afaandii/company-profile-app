@@ -4,7 +4,6 @@
         if (window.scrollY > 10) {
             navbar.classList.add("bg-black/80");
         } else {
-            // biar ga bentrok sama menu terbuka
             if (
                 !document.getElementById("navbarNav").classList.contains("show")
             ) {
@@ -42,13 +41,13 @@
         // Toggle ikon mengikuti status collapse + background hitam
         nav.addEventListener("show.bs.collapse", () => {
             setIcon(true);
-            navbar.classList.add("bg-black/80"); // kasih background hitam
+            navbar.classList.add("bg-black/80");
         });
 
         nav.addEventListener("hide.bs.collapse", () => {
             setIcon(false);
             if (window.scrollY <= 10) {
-                navbar.classList.remove("bg-black/80"); // hapus background kalau belum discroll
+                navbar.classList.remove("bg-black/80");
             }
         });
     });
