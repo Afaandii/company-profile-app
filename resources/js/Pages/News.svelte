@@ -53,7 +53,6 @@
                                     alt="foto"
                                     class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <!-- Badge tanggal -->
                                 <div
                                     class="absolute top-3 left-3 bg-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-lg flex items-center space-x-2"
                                 >
@@ -97,18 +96,15 @@
                                 class="w-full h-56 bg-gray-300 animate-pulse"
                             ></div>
                             <div class="p-4 space-y-3">
-                                <!-- skeleton title -->
                                 <div
                                     class="w-3/4 h-6 bg-gray-300 rounded animate-pulse"
                                 ></div>
-                                <!-- skeleton excerpt -->
                                 <div
                                     class="w-full h-4 bg-gray-300 rounded animate-pulse"
                                 ></div>
                                 <div
                                     class="w-5/6 h-4 bg-gray-300 rounded animate-pulse"
                                 ></div>
-                                <!-- skeleton button -->
                                 <div
                                     class="w-24 h-5 bg-gray-300 rounded animate-pulse mt-2"
                                 ></div>
