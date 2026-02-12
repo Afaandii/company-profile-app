@@ -44,6 +44,9 @@
                                             <th scope="col">Title</th>
                                             <th scope="col">Slug</th>
                                             <th scope="col">Excerpt</th>
+                                            <th scope="col">Excerpt</th>
+                                            <th scope="col">Excerpt</th>
+                                            <th scope="col">Excerpt</th>
                                             <th scope="col">Content</th>
                                             <th scope="col">Image Cover</th>
                                             <th scope="col">Aksi</th>

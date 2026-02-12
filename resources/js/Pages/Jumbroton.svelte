@@ -1,13 +1,13 @@
 <script>
-    import clients1 from "/public/storage/image/logo1.png";
-    import clients2 from "/public/storage/image/logo2.png";
-    import clients3 from "/public/storage/image/logo3.png";
-    import clients4 from "/public/storage/image/logo4.png";
-    import clients5 from "/public/storage/image/logo5.png";
-    import clients6 from "/public/storage/image/logo6.png";
-    import clients7 from "/public/storage/image/logo7.png";
-    import clients8 from "/public/storage/image/logo8.png";
-    import clients9 from "/public/storage/image/logo9.png";
+    import clients1 from "/storage/image/logo1.png";
+    import clients2 from "/storage/image/logo2.png";
+    import clients3 from "/storage/image/logo3.png";
+    import clients4 from "/storage/image/logo4.png";
+    import clients5 from "/storage/image/logo5.png";
+    import clients6 from "/storage/image/logo6.png";
+    import clients7 from "/storage/image/logo7.png";
+    import clients8 from "/storage/image/logo8.png";
+    import clients9 from "/storage/image/logo9.png";
 </script>
 
 <section class="brand-section w-100 h-auto bg-[#1f2122] md:w-full">
