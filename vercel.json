@@ -3,8 +3,6 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.2" }
     },
-    "installCommand": "composer install",
-    "buildCommand": "mkdir -p bootstrap/cache && mkdir -p storage/framework/views",
     "env": {
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
