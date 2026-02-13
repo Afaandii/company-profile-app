@@ -33,7 +33,7 @@
 
 <style>
     .hero {
-        background-image: url("storage/image/hero-bg.png");
+        background-image: url("/storage/image/hero-bg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -41,7 +41,7 @@
 
     @media screen and (max-width: 390px) {
         #hero {
-            background-image: url("storage/image/hero-bg-mobile.png");
+            background-image: url("/storage/image/hero-bg-mobile.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
