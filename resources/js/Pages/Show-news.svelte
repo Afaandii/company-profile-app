@@ -26,7 +26,7 @@
     onMount(async () => {
         if (id) {
             const res = await fetch(
-                `http://localhost:8000/api/show-news/${id}`,
+                `/api/show-news/${id}`,
             );
             const data = await res.json();
             news = data;
