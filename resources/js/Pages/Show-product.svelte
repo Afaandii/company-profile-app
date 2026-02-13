@@ -34,7 +34,7 @@
     onMount(async () => {
         if (id) {
             const res = await fetch(
-                `http://localhost:8000/api/show-product/${id}`,
+                `/api/show-product/${id}`,
             );
             let data = await res.json();
             product = data.product;

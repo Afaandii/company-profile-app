@@ -6,7 +6,7 @@
     let otherNews = [];
 
     onMount(async () => {
-        const res = await fetch("http://localhost:8000/api/berita");
+        const res = await fetch("/api/berita");
         const data = await res.json();
         newsList = data;
 
